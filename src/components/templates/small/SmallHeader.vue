@@ -12,7 +12,7 @@ onBeforeRouteUpdate(() => {
   <header class="header">
   <nav>
     <div class="logo">
-      <a href="index.html"><span>HSR</span>Camarões</a>
+      <a href="index.html"><span>Teste</span>Teste</a>
     </div>
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-icon">&#9776;</label>

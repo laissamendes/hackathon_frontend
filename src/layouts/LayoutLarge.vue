@@ -33,7 +33,6 @@ import LargeFooter from '@/components/templates/large/LargeFooter.vue'
 
 
 aside {
-  width: 100px;
   grid-area: aside;
 }
 
