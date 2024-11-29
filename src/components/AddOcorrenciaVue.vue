@@ -1,17 +1,24 @@
-<script>
-import Tilt from 'vanilla-tilt-vue'
+<script setup>
+import { ref } from 'vue';
+import Tilt from 'vanilla-tilt-vue';
+import { onMounted } from 'vue';
+import { useOcorrenciaStore } from '@/stores/ocorrencia.js';
 
-export default {
-  name: 'App',
-  components: {
-    Tilt,
-  },
-  data: function () {
-    return {
-      options: { gyroscope: true },
-    }
-  },
+// import { formatDescription, formatPrice, formatTitle } from '@/helpers/format';
+
+const ocorrenciaStore = useOcorrenciaStore();
+const ocorrencia = ref(null);
+
+
+async function getOcorrencia() {
+  await ocorrenciaStore.getOcorrencia();
 }
+
+onMounted(async () => {
+  await getOcorrencia();
+});
+
+const options = ref({ gyroscope: true });
 </script>
 <template>
   <div class="home">
@@ -43,15 +50,14 @@ export default {
         <a href="#" class="modal__close">&times;</a>
     </div>
 
-
-
 </div>
     <div class="gradient" />
 
     <div class="buttons">
       <div>
-        <Tilt :options="this.options" parallax="true">
-          <div class="container">
+        <Tilt :options="options" parallax="true">
+          <div   class="container">
+
             <div class="wrapper">
               <h1></h1>
               <p>Turma</p>
@@ -75,7 +81,7 @@ export default {
                 </select>
               </div>
               <div class="form-floating mb-3">
-                <p>Ocorrência</p>
+                <p></p>
 <select class="form-select" aria-label="Default select example">
   <option selected>Open this select menu</option>
   <option value="1">3</option>
