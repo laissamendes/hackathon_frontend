@@ -1,16 +1,24 @@
 <script>
-import Tilt from 'vanilla-tilt-vue'
+import { ref } from 'vue'
 
-export default {
-  name: 'App',
-  components: {
-    Tilt,
-  },
-  data: function () {
-    return {
-      options: { gyroscope: true },
-    }
-  },
+import { usePreConselhoStore } from '@/stores/preConselho.js'
+const preConselhoStore = usePreConselhoStore()
+
+
+const trimestre = [
+  { id: 1, description: '1° trimestre' },
+  { id: 2, description: '2° trimestre' },
+  { id: 3, description: '3° trimestre' }
+]
+
+const preConselho = ref({
+  turma: null,
+  trimestre: '',
+  descricao_trimestre: '',
+})
+
+async function registrarPreConselho() {
+  await preConselhoStore.adicionarPreConselho(preConselho.value)
 }
 </script>
 <template>
@@ -23,23 +31,21 @@ export default {
           <form>
   <div class="form-group">
     <label for="exampleFormControlInput1"> <h1>Turma</h1></label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <input v-model="preConselho.turma.value" type="text"  class="form-control" id="exampleFormControlInput1">
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect1"><h1>Trimestre</h1></label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+    <select  class="form-control" id="exampleFormControlSelect1">
+      <option :value="tri.id" v-for="tri in trimestre" :key="tri.id">{{ tri.preConselho.trimestre }}</option>
     </select>
   </div>
   <div class="form-group">
-    <label for="exampleFormControlTextarea1"><h1>Como foi o trimestre:</h1></label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label for="exampleFormControlTextarea1"><h1>Como foi o trimestre?</h1></label>
+    <textarea v-model="preConselho.descricao_trimestre" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
-  
+  <div id="btn-submit">
+  <button type="submit" @click="registrarPreConselho()">Enviar</button></div>
+
 </form>
 
 

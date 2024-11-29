@@ -43,12 +43,6 @@ const router = createRouter({
       component: PreConselho,
     },
     {
-      path: '/about',
-      name: 'about',
-      component: AboutView,
-    },
-    {
-      path: '/inicio',
       name: 'inicio',
 
       component: Inicio,

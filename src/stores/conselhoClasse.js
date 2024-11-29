@@ -16,24 +16,6 @@ export const useConselhoClassseStore = defineStore('conselhoClasse', () => {
     }
   }
 
-  // async function getProdutosByCategoria(categoria_id) {
-  //   try {
-  //     concelhoClasse.value = await conselhoClasseService.getProdutosByCategoria(categoria_id);
-  //   } catch (error) {
-  //     console.error('Erro ao buscar concelhoClasse por categoria:', error);
-  //   }
-  // }
-
-  // async function adicionarAluno(conselhoClasse) {
-  //   try {
-  //     const response = await conselhoClasseService.createAluno(conselhoClasse);
-  //     concelhoClasse.value.push(response);
-  //     await getConcelhoClasse();
-  //   } catch (error) {
-  //     console.error('Erro ao adicionar conselhoClasse:', error);
-  //   }
-  // }
-
   async function atualizarConcelhoClasse(conselhoClasse) {
     try {
       await conselhoClasseService.atualizarConcelhoClasse(conselhoClasse);
@@ -43,14 +25,6 @@ export const useConselhoClassseStore = defineStore('conselhoClasse', () => {
     }
   }
 
-  // async function excluirAluno(id) {
-  //   try {
-  //     await conselhoClasseService.excluirAluno(id);
-  //     await getConcelhoClasse();
-  //   } catch (error) {
-  //     console.error('Erro ao excluir conselhoClasse:', error);
-  //   }
-  // }
   async function getConselhoClassePorId(id) {
     try {
       const conselhoClasse = await conselhoClasseService.getConselhoClassePorId(id);
@@ -59,7 +33,6 @@ export const useConselhoClassseStore = defineStore('conselhoClasse', () => {
       console.error('Erro ao buscar conselhoClasse por ID:', error);
     }
   }
-
 
   return {
     getConcelhoClasse,
