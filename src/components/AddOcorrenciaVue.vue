@@ -17,46 +17,35 @@ export default {
   <div class="home">
     <div id="demo-modal" class="modal wrap">
     <div class="modal__content wrap">
-      <div class="row g-2 wrap">
-  <div class="col-md">
-    <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" >
-      <label for="floatingInputGrid">Aluno: [nome]</label>
-    </div>
-  </div>
-  <div class="col-md">
-    <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" >
-      <label for="floatingInputGrid">Disciplina: [nota]</label>
 
-    </div>
-  </div>
+      <div class="card-container">
+	<span class="pro">PRO</span>
+	<img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+	<h3>Ricky Park</h3>
+	<h6>New York</h6>
+	<p>User interface designer and <br/> front-end developer</p>
+
+	<div class="skills">
+		<h6>Skills</h6>
+		<ul>
+			<li>UI / UX</li>
+			<li>Front End Development</li>
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+			<li>React</li>
+			<li>Node</li>
+		</ul>
+	</div>
 </div>
+
+
         <a href="#" class="modal__close">&times;</a>
     </div>
-</div>
 
-<div id="demo-modal2" class="modal wrap">
-    <div class="modal__content wrap">
-      <div class="row g-2 wrap">
-  <div class="col-md">
-    <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" >
-      <label for="floatingInputGrid">Aluno: [nome]</label>
-    </div>
-  </div>
-  <div class="col-md">
-    <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" >
-      <label for="floatingInputGrid">Tipo de Ocorrência: [ocorre.]</label>
 
-    </div>
-  </div>
-</div>
-        <a href="#" class="modal__close">&times;</a>
-    </div>
-</div>
 
+</div>
     <div class="gradient" />
 
     <div class="buttons">
@@ -65,7 +54,7 @@ export default {
           <div class="container">
             <div class="wrapper">
               <h1></h1>
-              <p>Trimestre</p>
+              <p>Turma</p>
               <div class="form-floating mb-3">
 
                 <select class="form-select" aria-label="Default select example">
@@ -75,7 +64,7 @@ export default {
                   <option value="3">Terceiro</option>
                 </select>
               </div>
-              <p>Turma</p>
+              <p>Nota menor q 6</p>
               <div class="form-floating mb-3">
 
                 <select class="form-select" aria-label="Default select example">
@@ -85,12 +74,18 @@ export default {
                   <option value="3">1</option>
                 </select>
               </div>
-             
+              <div class="form-floating mb-3">
+                <p>Ocorrência</p>
+<select class="form-select" aria-label="Default select example">
+  <option selected>Open this select menu</option>
+  <option value="1">3</option>
+  <option value="2">2</option>
+  <option value="3">1</option>
+</select>
+</div>
             </div>
 
-            <div class="button-wrapper">
-              <button href="#demo-modal" class="btn fill"><a style="text-decoration-line: none;" href="#demo-modal">Iniciar Conselho</a></button>
-            </div>
+
 
 
 
@@ -104,20 +99,13 @@ export default {
         <Tilt :options="this.options" parallax="true">
           <div class="container">
             <div class="wrapper">
-              <p>Ocorrências</p>
+              <p>Alunos</p>
               <div class="banner-image">
-                <svg xmlns="http://www.w3.org/2000/svg" class="cardback" viewBox="0 0 24 24">
-                  <title>alert-circle</title>
-                  <path
-                    d="M13,13H11V7H13M13,17H11V15H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
-                  />
-                </svg>
+                <button href="#demo-modal" type="button"  style="height: 50px; border: none;"> <a class="btn btn-primary btn-lg" href="#demo-modal">Nome Aluno</a></button>
               </div>
             </div>
 
-            <div class="button-wrapper">
-              <button href="#demo-modal" class="btn fill"><a style="text-decoration-line: none;" href="#demo-modal2">Ver</a></button>
-            </div>
+
           </div>
         </Tilt>
       </div>
@@ -126,7 +114,87 @@ export default {
 
 </template>
 <style scoped>
+h3 {
+	margin: 10px 0;
+}
 
+h6 {
+	margin: 5px 0;
+	text-transform: uppercase;
+}
+
+p {
+	font-size: 14px;
+	line-height: 21px;
+}
+
+.card-container {
+	background-color: #231E39;
+	border-radius: 5px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: #B3B8CD;
+	padding-top: 30px;
+	position: relative;
+	width: 350px;
+	max-width: 100%;
+	text-align: center;
+  bottom: 40px;
+}
+
+.card-container .pro {
+	color: #231E39;
+	background-color: #FEBB0B;
+	border-radius: 3px;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 3px 7px;
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+
+.card-container .round {
+	border: 1px solid #03BFCB;
+	border-radius: 50%;
+	padding: 7px;
+}
+
+button.primary {
+	background-color: #03BFCB;
+	border: 1px solid #03BFCB;
+	border-radius: 3px;
+	color: #231E39;
+	font-family: Montserrat, sans-serif;
+	font-weight: 500;
+	padding: 10px 25px;
+}
+
+button.primary.ghost {
+	background-color: transparent;
+	color: #02899C;
+}
+
+.skills {
+	background-color: #1F1A36;
+	text-align: left;
+	padding: 15px;
+	margin-top: 30px;
+}
+
+.skills ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.skills ul li {
+	border: 1px solid #2D2747;
+	border-radius: 2px;
+	display: inline-block;
+	font-size: 12px;
+	margin: 0 7px 7px 0;
+	padding: 7px;
+}
 
 
 .wrapper1 {
@@ -174,7 +242,6 @@ export default {
 .modal__content {
   border-radius: 4px;
   position: relative;
-  width: 800px;
   max-width: 90%;
   background: #fff;
   padding: 1em 2em;
@@ -420,6 +487,9 @@ p {
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently*/
 }
+.wrap{
+  flex-wrap: wrap;
+}
 @media (min-aspect-ration: 16/9) {
   .hero {
     width: 100%;
@@ -437,21 +507,25 @@ p {
     flex-direction: column;
     transform: translateY(50%);
   }
+
 }
 @media (max-width:720px){
   div{
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
+
+
 .container{
   display: flex;
   width: 300px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}.button{
+  height: auto;
 }
-.wrap{
-  flex-wrap: wrap;
+
 }
-}
+
 
 </style>

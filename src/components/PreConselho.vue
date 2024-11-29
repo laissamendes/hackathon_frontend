@@ -12,26 +12,51 @@ export default {
     }
   },
 }
-
-
-
 </script>
 <template>
   <div class="home">
-    <div class="gradient" />
 
-    
+
+    <div class="buttons">
+      <div style="height: 1000px;">
+        <div class="container">
+          <form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1"> <h1>Turma</h1></label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1"><h1>Trimestre</h1></label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1"><h1>Como foi o trimestre:</h1></label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  
+</form>
+
+
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <style scoped>
-div{
+div {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+
 }
-.container{
+.container {
   font-size: 10px;
-  position: relative;
 }
 
 body {
@@ -59,9 +84,13 @@ body {
 
   padding: 15px;
 }
-
-
-
+form{
+  width: 500px;
+  height: 400px;
+}
+textarea{
+  height: 250px;
+}
 .container {
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -79,7 +108,7 @@ body {
 
   transition: all 0.3s ease;
 }
-div.container{
+div.container {
   height: 570px;
 }
 .container:hover {
@@ -114,7 +143,10 @@ container:active {
     0 15px 24px var(--box-shadow-color);
 }
 .wrapper {
-  width: 252px;
+  display: flex;
+  width: 952px;
+  flex-direction: column;
+  height: 600px;
 }
 .banner-image {
   background-image: url();
@@ -230,7 +262,7 @@ p {
 .gradient {
   width: 100%;
   height: 100%;
-  position: static;
+  position: fixed;
   top: 0;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
 }
@@ -267,10 +299,12 @@ p {
   .buttons {
     flex-direction: column;
     transform: translateY(50%);
-  }.home{
-
-    flex-direction: column;
-    flex-wrap: wrap;
+  } .container{
+    width: 400px;
+    margin-bottom: 700px;
+  }
+  form{
+    width: 200px;
   }
 }
 </style>
