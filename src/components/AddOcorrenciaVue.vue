@@ -404,6 +404,9 @@ p {
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently*/
 }
+.wrap{
+  flex-wrap: wrap;
+}
 @media (min-aspect-ration: 16/9) {
   .hero {
     width: 100%;
@@ -421,11 +424,13 @@ p {
     flex-direction: column;
     transform: translateY(50%);
   }
+
 }
 @media (max-width:720px){
   div{
     flex-wrap: nowrap;
   }
+
 .container{
   display: flex;
   width: 300px;
@@ -433,9 +438,7 @@ p {
   justify-content: center;
   align-items: center;
 }
-.wrap{
-  flex-wrap: wrap;
-}
+
 }
 
 </style>
