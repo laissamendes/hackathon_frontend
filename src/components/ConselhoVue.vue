@@ -1,17 +1,6 @@
-<script>
-import Tilt from 'vanilla-tilt-vue'
-
-export default {
-  name: 'App',
-  components: {
-    Tilt,
-  },
-  data: function () {
-    return {
-      options: { gyroscope: true },
-    }
-  },
-}
+<script setup>
+import { ref, reactive } from 'vue'
+const titulo = ref('Formulário de Cadastro de Produtos')
 </script>
 <template>
   <div class="home">
@@ -87,6 +76,7 @@ export default {
               <div class="form-floating mb-3">
                 <select class="form-select" aria-label="Default select example">
                   <option selected>Open this select menu</option>
+                  <h1>{{ titulo }}</h1>
                   <option value="1">Primeiro</option>
                   <option value="2">Segundo</option>
                   <option value="3">Terceiro</option>
@@ -96,8 +86,9 @@ export default {
               <div class="form-floating mb-3">
                 <select class="form-select" aria-label="Default select example">
                   <option selected>Open this select menu</option>
-                  
                   <option value="1">3</option>
+                  <option value="2">2</option>
+                  <option value="3">1</option>
                 </select>
               </div>
             </div>
