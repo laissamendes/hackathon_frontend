@@ -6,6 +6,7 @@ import Inicio from '../views/InicioView.vue';
 import Conselho from '../views/ConselhoView.vue';
 import AddOcorrencia from '../views/AddOcorrenciaView.vue';
 import PreConselho from '../views/PreConselhoView.vue';
+import AboutView from '../views/AboutView.vue';
 
 
 const router = createRouter({
@@ -42,7 +43,6 @@ const router = createRouter({
       component: PreConselho,
     },
     {
-      path: '/',
       name: 'inicio',
 
       component: Inicio,
