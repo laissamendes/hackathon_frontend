@@ -40,7 +40,7 @@ import '../../node_modules/vue-preloader/dist/style.css'
 
 </template>
 
-<style>
+<style scoped>
 a{
   color: #141414;
 }

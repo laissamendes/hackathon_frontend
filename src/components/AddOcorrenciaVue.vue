@@ -17,21 +17,49 @@ export default {
   <div class="home">
     <div id="demo-modal" class="modal wrap">
     <div class="modal__content wrap">
-      <div class="row g-2 wrap">
-  <div class="col-md">
-    <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" >
-      <label for="floatingInputGrid">Aluno</label>
-    </div>
-  </div>
-  <div class="col-md">
-    <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" >
-      <label for="floatingInputGrid">Tipo de Ocorrência</label>
-
-    </div>
-  </div>
-</div>
+      <section>
+        <div class="card1">
+            <div class="card">
+                <div class="left-container">
+                  <img src="https://cdn.pixabay.com/photo/2020/10/19/09/44/woman-5667299__480.jpg" alt="Profile Image">
+                  <h2 class="gradienttext">John Doe</h2>
+                  <p>Web Developer</p>
+                </div>
+                <div class="right-container">
+                  <h3 class="gradienttext">Profile Details</h3>
+                  <table>
+                      <tr>
+                          <td>Name :</td>
+                          <td>John Doe</td>
+                        </tr>
+                    <tr>
+                      <td>Age :</td>
+                      <td>35</td>
+                    </tr>
+                    <tr>
+                      <td>Mobile :</td>
+                      <td>+91 XXXXXXXXXX</td>
+                    </tr>
+                    <tr>
+                      <td>Email :</td>
+                      <td>john@example.com</td>
+                    </tr>
+                    <tr>
+                      <td>Address :</td>
+                      <td>123 Main St, Anytown, USA</td>
+                    </tr>
+                  </table>
+                  <div class="social-icons">
+                    <a href="#"><i class="fa fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+                  </div>
+                  <div class="credit">Made with <span style="color:tomato;font-size:20px;">❤ </span>by<a href="https://www.learningrobo.com/"> Learning Robo</a></div>
+                </div>
+              </div>
+        </div>
+    </section>
 
 
 
@@ -49,7 +77,7 @@ export default {
           <div class="container">
             <div class="wrapper">
               <h1></h1>
-              <p>Trimestre</p>
+              <p>Turma</p>
               <div class="form-floating mb-3">
 
                 <select class="form-select" aria-label="Default select example">
@@ -59,7 +87,7 @@ export default {
                   <option value="3">Terceiro</option>
                 </select>
               </div>
-              <p>Turma</p>
+              <p>Nota < 6</p>
               <div class="form-floating mb-3">
 
                 <select class="form-select" aria-label="Default select example">
@@ -69,11 +97,18 @@ export default {
                   <option value="3">1</option>
                 </select>
               </div>
+              <div class="form-floating mb-3">
+                <p>Ocorrência</p>
+<select class="form-select" aria-label="Default select example">
+  <option selected>Open this select menu</option>
+  <option value="1">3</option>
+  <option value="2">2</option>
+  <option value="3">1</option>
+</select>
+</div>
             </div>
 
-            <div class="button-wrapper">
-              <button href="#demo-modal" class="btn fill"><a style="text-decoration-line: none;" href="#demo-modal">Iniciar Conselho</a></button>
-            </div>
+
 
 
 
@@ -87,20 +122,13 @@ export default {
         <Tilt :options="this.options" parallax="true">
           <div class="container">
             <div class="wrapper">
-              <p>Ocorrências</p>
+              <p>Alunos</p>
               <div class="banner-image">
-                <svg xmlns="http://www.w3.org/2000/svg" class="cardback" viewBox="0 0 24 24">
-                  <title>alert-circle</title>
-                  <path
-                    d="M13,13H11V7H13M13,17H11V15H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
-                  />
-                </svg>
+                <button href="#demo-modal" type="button"  style="height: 50px; border: none;"> <a class="btn btn-primary btn-lg" href="#demo-modal">Nome Aluno</a></button>
               </div>
             </div>
 
-            <div class="button-wrapper">
-              <button href="#demo-modal" class="btn fill"><a style="text-decoration-line: none;" href="#demo-modal">Ver</a></button>
-            </div>
+
           </div>
         </Tilt>
       </div>
@@ -157,7 +185,6 @@ export default {
 .modal__content {
   border-radius: 4px;
   position: relative;
-  width: 800px;
   max-width: 90%;
   background: #fff;
   padding: 1em 2em;
@@ -439,6 +466,193 @@ p {
   align-items: center;
 }
 
+}
+
+section{
+    height:100vh;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+section::before,
+.card1::before{
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50% 20px;
+    opacity:.8;
+}
+
+section::before{
+    top: 6%;
+    left: 75%;
+    background: linear-gradient(#AAFFA9, #11FFBD);
+}
+
+.card1::before{
+    bottom:2%;
+    left: 10%;
+    background: linear-gradient(#0098f0, #0457d3);
+}
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    width: 900px;
+    height: 480px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    background-color: rgba(255,255,255,0.05);
+    filter: blur(0.2px);
+}
+.left-container {
+    flex: 1;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:100%;
+    padding: 10px;
+    margin: 30px;
+    border-right: 1px solid #e4e4e4;
+  }
+
+  .right-container {
+    flex: 1;
+    max-width:70%;
+    height:430px;
+    padding: 10px;
+    margin: 20px;
+    border-radius:30px;
+  }
+  @media only screen and (max-width: 860px) {
+    .card
+     {
+     flex-direction: column;
+     margin: 10px;
+     height: auto;
+     width: 100%;
+    }
+    .left-container{
+        flex: 1;
+        max-width:100%;
+        border:none;
+    }
+ section::before{
+        top:4%;
+        left:51%;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .card
+     {
+     flex-direction: column;
+     margin: 10px;
+    }
+    .left-container{
+        flex: 1;
+        max-width:100%;
+    }
+    .card1::before{
+        bottom: -14%;
+        left: 1%;
+    }
+
+
+  }
+  img {
+    border: double 5px transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(white, white),
+                      linear-gradient(to right, #ee00ff,#fbff00);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    width: 200px;
+    height: 200px;
+    max-width: 200px;
+    margin-top: 70px;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  .gradienttext{
+    background-image: linear-gradient(to right, #00c6ff 0%, #0072ff 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-icons a {
+    background-image: linear-gradient(to right, #00c6ff 0%, #0072ff 100%);
+    display: inline-block;
+    margin-right: 15px;
+    padding:15px ;
+    width:30px;
+    height:30px;
+    border-radius:30px;
+    text-align: center;
+  }
+
+  .social-icons i {
+    font-size: 24px;
+    color:rgba(255, 255, 255, .7);
+    transition: all 0.3s ease;
+  }
+
+  .social-icons i:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+
+
+  table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 280px;
+    border-collapse: collapse;
+  }
+
+  td {
+
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+  }
+
+  td:first-child {
+    font-weight: bold;
+  }
+  .credit a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 800;
+}
+
+.credit {
+    color: #fff;
+  text-align: center;
+  margin-top: 10px;
+  font-family: Verdana,Geneva,Tahoma,sans-serif;
 }
 
 </style>

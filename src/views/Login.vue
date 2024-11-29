@@ -19,20 +19,20 @@ window.addEventListener("scroll", reveal);
 
 
 import { onMounted } from 'vue';
-    
+
     import Rellax from 'rellax'
-    
+
     onMounted(() => {
       let rellax = new Rellax('.rellax');
-      
 
-    
+
+
   });
 </script>
 
 <template>
   <body>
-	<div class="main reveal">  	
+	<div class="main reveal">
 		<input type="checkbox" id="chk" aria-hidden="true">
 
 			<div class="signup">
@@ -66,8 +66,11 @@ body{
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
+  width: 100%;
 	font-family: 'Jost', sans-serif;
-	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+	background-image: linear-gradient(10deg, rgba(116, 125, 195, 0.699) 20%, rgba(85, 27, 35, 0.692) 100%), url("../assets/images/fundo.png");
+  background-position: center;
+  background-size: cover;
 }
 .main{
 	width: 350px;
@@ -145,7 +148,7 @@ button:hover{
 	transform: translateY(-500px);
 }
 #chk:checked ~ .login label{
-	transform: scale(1);	
+	transform: scale(1);
 }
 #chk:checked ~ .signup label{
 	transform: scale(.6);
