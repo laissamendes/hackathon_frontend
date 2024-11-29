@@ -16,46 +16,64 @@ export default {
 <template>
   <div class="home">
     <div id="demo-modal" class="modal wrap">
-    <div class="modal__content wrap">
-      <div class="row g-2 wrap">
-  <div class="col-md">
-    <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" >
-      <label for="floatingInputGrid">Aluno: [nome]</label>
-    </div>
-  </div>
-  <div class="col-md">
-    <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" >
-      <label for="floatingInputGrid">Disciplina: [nota]</label>
-
-    </div>
-  </div>
-</div>
+      <div class="modal__content wrap">
+        <div class="row g-2 wrap">
+          <div class="col-md">
+            <div class="form-floating">
+              <input
+                type="email"
+                class="form-control"
+                id="floatingInputGrid"
+                placeholder="name@example.com"
+              />
+              <label for="floatingInputGrid">Aluno: [nome]</label>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="form-floating">
+              <input
+                type="email"
+                class="form-control"
+                id="floatingInputGrid"
+                placeholder="name@example.com"
+              />
+              <label for="floatingInputGrid">Disciplina: [nota]</label>
+            </div>
+          </div>
+        </div>
         <a href="#" class="modal__close">&times;</a>
+      </div>
     </div>
-</div>
 
-<div id="demo-modal2" class="modal wrap">
-    <div class="modal__content wrap">
-      <div class="row g-2 wrap">
-  <div class="col-md">
-    <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" >
-      <label for="floatingInputGrid">Aluno: [nome]</label>
-    </div>
-  </div>
-  <div class="col-md">
-    <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" >
-      <label for="floatingInputGrid">Tipo de Ocorrência: [ocorre.]</label>
-
-    </div>
-  </div>
-</div>
+    <div id="demo-modal2" class="modal wrap">
+      <div class="modal__content wrap">
+        <div class="row g-2 wrap">
+          <div class="col-md">
+            <div class="form-floating">
+              <input
+                type="email"
+                class="form-control"
+                id="floatingInputGrid"
+                placeholder="name@example.com"
+              />
+              <label for="floatingInputGrid">Aluno: [nome]</label>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="form-floating">
+              <input
+                type="email"
+                class="form-control"
+                id="floatingInputGrid"
+                placeholder="name@example.com"
+              />
+              <label for="floatingInputGrid">Tipo de Ocorrência: [ocorre.]</label>
+            </div>
+          </div>
+        </div>
         <a href="#" class="modal__close">&times;</a>
+      </div>
     </div>
-</div>
 
     <div class="gradient" />
 
@@ -67,7 +85,6 @@ export default {
               <h1></h1>
               <p>Trimestre</p>
               <div class="form-floating mb-3">
-
                 <select class="form-select" aria-label="Default select example">
                   <option selected>Open this select menu</option>
                   <option value="1">Primeiro</option>
@@ -77,25 +94,19 @@ export default {
               </div>
               <p>Turma</p>
               <div class="form-floating mb-3">
-
                 <select class="form-select" aria-label="Default select example">
                   <option selected>Open this select menu</option>
+                  
                   <option value="1">3</option>
-                  <option value="2">2</option>
-                  <option value="3">1</option>
                 </select>
               </div>
-             
             </div>
 
             <div class="button-wrapper">
-              <button href="#demo-modal" class="btn fill"><a style="text-decoration-line: none;" href="#demo-modal">Iniciar Conselho</a></button>
+              <button href="#demo-modal" class="btn fill">
+                <a style="text-decoration-line: none" href="#demo-modal">Iniciar Conselho</a>
+              </button>
             </div>
-
-
-
-
-
           </div>
         </Tilt>
       </div>
@@ -116,19 +127,17 @@ export default {
             </div>
 
             <div class="button-wrapper">
-              <button href="#demo-modal" class="btn fill"><a style="text-decoration-line: none;" href="#demo-modal2">Ver</a></button>
+              <button href="#demo-modal" class="btn fill">
+                <a style="text-decoration-line: none" href="#demo-modal2">Ver</a>
+              </button>
             </div>
           </div>
         </Tilt>
       </div>
     </div>
   </div>
-
 </template>
 <style scoped>
-
-
-
 .wrapper1 {
   height: 100vh;
   /* This part is important for centering the content */
@@ -162,8 +171,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(77, 77, 77, .7);
-  transition: all .4s;
+  background: rgba(77, 77, 77, 0.7);
+  transition: all 0.4s;
 }
 
 .modal:target {
@@ -438,20 +447,19 @@ p {
     transform: translateY(50%);
   }
 }
-@media (max-width:720px){
-  div{
+@media (max-width: 720px) {
+  div {
     flex-wrap: nowrap;
   }
-.container{
-  display: flex;
-  width: 300px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  .container {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrap {
+    flex-wrap: wrap;
+  }
 }
-.wrap{
-  flex-wrap: wrap;
-}
-}
-
 </style>
