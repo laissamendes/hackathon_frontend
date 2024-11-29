@@ -3,6 +3,7 @@ import LayoutFull from '@/layouts/LayoutFull.vue';
 import HomeView from '../views/HomeView.vue';
 import Login from '../views/Login.vue';
 import Inicio from '../views/InicioView.vue';
+import Conselho from '../views/ConselhoView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,10 +24,15 @@ const router = createRouter({
       component: Login,
     },
     {
+      path: '/conselho',
+      name: 'conselho',
+      component: Conselho,
+    },
+    {
       path: '/inicio',
       name: 'inicio',
 
-      component: Inicio
+      component: Inicio,
     },
       ]}
   ]

@@ -49,8 +49,8 @@ export default {
         <div class="textos-hero">
             <h1>Título</h1>
             <p>SubTítulo</p>
-            <a class="cta" href="#sec" style="scroll-behavior: smooth;">Ir para</a>
-            <button class="cta" href="#sec">teste</button>
+            <a class="cta" href="#sec" style="scroll-behavior: smooth;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-down-bold-circle-outline</title><path d="M12,17L7,12H10V8H14V12H17L12,17M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" /></svg></a>
+           
 
         </div>
         <div class="svg-hero" id="sec" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"

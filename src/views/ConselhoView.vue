@@ -1,9 +1,9 @@
 <script setup>
 import PreLoader from '@/components/PreLoader.vue';
-import Landing from '@/components/HomeVue.vue';
+import Conselho from '@/components/ConselhoVue.vue';
 </script>
 
 <template>
     <PreLoader></PreLoader>
-    <Landing></Landing>
+    <Conselho></Conselho>
 </template>
