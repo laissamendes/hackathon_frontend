@@ -24,22 +24,26 @@ export default {
             <div class="wrapper">
               <h1></h1>
               <div class="form-floating mb-3">
+                <p>Trimestre</p>
                 <input
                   type="email"
                   class="form-control"
                   id="floatingInput"
                   placeholder="name@example.com"
                 />
-                <label for="floatingInput">Email address</label>
+
+                <label for="floatingInput">Trimestre</label>
               </div>
               <div class="form-floating">
+                <p>Turma</p>
                 <input
                   type="password"
                   class="form-control"
                   id="floatingPassword"
                   placeholder="Password"
                 />
-                <label for="floatingPassword">Password</label>
+
+                <label for="floatingPassword">Turma</label>
               </div>
             </div>
 
@@ -179,10 +183,10 @@ h1 {
   margin: 0px;
 }
 p {
-  color: #fff;
+  color: #000000;
   font-family: 'Lato', sans-serif;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1.4rem;
   line-height: 150%;
   letter-spacing: 2px;
   text-transform: uppercase;
