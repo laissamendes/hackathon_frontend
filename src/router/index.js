@@ -42,7 +42,7 @@ const router = createRouter({
       component: PreConselho,
     },
     {
-      path: '/inicio',
+      path: '/',
       name: 'inicio',
 
       component: Inicio,
