@@ -21,26 +21,42 @@ export default {
   <div class="col-md">
     <div class="form-floating">
       <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" >
-      <label for="floatingInputGrid">Aluno</label>
+      <label for="floatingInputGrid">Aluno: [nome]</label>
     </div>
   </div>
   <div class="col-md">
     <div class="form-floating">
       <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" >
-      <label for="floatingInputGrid">Tipo de Ocorrência</label>
+      <label for="floatingInputGrid">Disciplina: [nota]</label>
 
     </div>
   </div>
 </div>
-
-
-
         <a href="#" class="modal__close">&times;</a>
     </div>
-
-
-
 </div>
+
+<div id="demo-modal2" class="modal wrap">
+    <div class="modal__content wrap">
+      <div class="row g-2 wrap">
+  <div class="col-md">
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" >
+      <label for="floatingInputGrid">Aluno: [nome]</label>
+    </div>
+  </div>
+  <div class="col-md">
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" >
+      <label for="floatingInputGrid">Tipo de Ocorrência: [ocorre.]</label>
+
+    </div>
+  </div>
+</div>
+        <a href="#" class="modal__close">&times;</a>
+    </div>
+</div>
+
     <div class="gradient" />
 
     <div class="buttons">
@@ -99,7 +115,7 @@ export default {
             </div>
 
             <div class="button-wrapper">
-              <button href="#demo-modal" class="btn fill"><a style="text-decoration-line: none;" href="#demo-modal">Ver</a></button>
+              <button href="#demo-modal" class="btn fill"><a style="text-decoration-line: none;" href="#demo-modal2">Ver</a></button>
             </div>
           </div>
         </Tilt>
