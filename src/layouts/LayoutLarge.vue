@@ -6,7 +6,7 @@ import LargeFooter from '@/components/templates/large/LargeFooter.vue'
 
 <template>
   <div id="layout-large">
-    
+
     <aside>
       <large-aside />
     </aside>
@@ -21,13 +21,13 @@ import LargeFooter from '@/components/templates/large/LargeFooter.vue'
 
 <style scoped>
 #layout-large {
-  
 
+width: 100%;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
     'aside main'
     'aside footer';
-  min-height: 100vh;
+
 }
 
 

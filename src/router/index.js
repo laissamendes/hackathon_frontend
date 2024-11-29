@@ -5,6 +5,8 @@ import Login from '../views/Login.vue';
 import Inicio from '../views/InicioView.vue';
 import Conselho from '../views/ConselhoView.vue';
 import AddOcorrencia from '../views/AddOcorrenciaView.vue';
+import PreConselho from '../views/PreConselhoView.vue';
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +35,11 @@ const router = createRouter({
       path: '/addocorrencia',
       name: 'addocorrencia',
       component: AddOcorrencia,
+    },
+    {
+      path: '/preconselho',
+      name: 'preconselho',
+      component: PreConselho,
     },
     {
       path: '/inicio',

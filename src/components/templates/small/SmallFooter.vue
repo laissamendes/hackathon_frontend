@@ -26,7 +26,7 @@
 
 
   .footer{
-      position: sticky;
+    
   background:#000;
   padding: 20px 0px;
   font-family: 'Play', sans-serif;

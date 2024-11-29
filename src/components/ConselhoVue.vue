@@ -85,6 +85,7 @@ export default {
                   <option value="3">1</option>
                 </select>
               </div>
+             
             </div>
 
             <div class="button-wrapper">
