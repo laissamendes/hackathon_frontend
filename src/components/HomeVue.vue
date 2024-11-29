@@ -1,4 +1,14 @@
 <script>
+ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from 'swiper/vue';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 function reveal() {
   let reveals = document.querySelectorAll(".reveal");
 
@@ -29,17 +39,27 @@ import { onMounted } from 'vue';
   });
 
   import Tilt from 'vanilla-tilt-vue'
-export default {
-  name: 'App',
-  components: {
-    Tilt
-  },
-  data: function(){
-    return {
-      options: { gyroscope: true}
-    }
-  }
-}
+  export default {
+    components: {
+      Swiper,
+      SwiperSlide,
+    },
+    setup() {
+      const onSwiper = (swiper) => {
+        console.log(swiper);
+      };
+      const onSlideChange = () => {
+        console.log('slide change');
+      };
+      return {
+        onSwiper,
+        onSlideChange,
+        modules: [Navigation, Pagination, Scrollbar, A11y],
+      };
+    },
+  };
+
+
 </script>
 
 <template>
@@ -47,19 +67,20 @@ export default {
     <header class="hero" >
         <div class="textos-hero">
             <h1>Título</h1>
-            <p>SubTítulo</p>
-            <a href=""></a>
+
+            <a href="">Entrar</a>
+            <a href="#sec">Ir</a>
 
 
         </div>
-        <div class="svg-hero" id="sec" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+        <div class="svg-hero"  style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
                 style="height: 100%; width: 100%;">
                 <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
                     style="stroke: none; fill: #fff;"></path>
         </svg></div>
     </header>
 
-    <section class="wave-conteudo website" >
+    <section id="sec" class="wave-conteudo website" >
 
         <div class="conteudo-textos-main">
             <h2 class="titulo left"><strong>Título</strong></h2>
@@ -86,14 +107,6 @@ export default {
 						Entrar como:
 					</span>
 
-
-
-
-          <div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							NUPE
-						</button>
-					</div>
           <div class="container-login100-form-btn">
 						<button class="login100-form-btn">
 							Docente
@@ -118,9 +131,21 @@ export default {
     <section class="info-last">
         <div class="container last-section">
             <div class="container-textos-main">
-                <h2 class="titulo left"><strong><span>Título</span></strong></h2>
-                <p class="paragrafo">parágrafo</p>
-                <a href="pag4.html" class="cta">Ir para Página</a>
+              <swiper
+    :modules="modules"
+    :slides-per-view="3"
+    :space-between="50"
+    navigation
+    :pagination="{ clickable: true }"
+    :scrollbar="{ draggable: true }"
+    @swiper="onSwiper"
+    @slideChange="onSlideChange"
+  >
+    <swiper-slide>Slide 1</swiper-slide>
+    <swiper-slide>Slide 2</swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+    ...
+  </swiper>
             </div>
 
         </div>
@@ -298,7 +323,7 @@ span {
 /* Info */
 
 .info{
-    background: #f5576c;
+    background: #8739fa;
     color: #fff;
 }
 
@@ -572,7 +597,7 @@ iframe {
 .wrap-login100 {
   width: 960px;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 30px;
   overflow: hidden;
 
   display: -webkit-box;

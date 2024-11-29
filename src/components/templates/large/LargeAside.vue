@@ -17,9 +17,9 @@ onBeforeRouteUpdate(() => {
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-icon">&#9776;</label>
     <ul class="menu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Skills</a></li>
-      <li><a href="#">Projects</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="#">Sobre</a></li>
       <li><a href="#">Connect</a></li>
     </ul>
   </nav>
@@ -40,8 +40,9 @@ onBeforeRouteUpdate(() => {
   top: 0;
   width: 100%;
   box-shadow: 0 4px 20px hsla(207, 24%, 35%, 0.1);
-  background-color: #151418;
+  background-color: #6e48a7;
   z-index: 1;
+  border-bottom: solid 2px #fff;
 }
 
 nav {
