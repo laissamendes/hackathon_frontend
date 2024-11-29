@@ -184,8 +184,7 @@ div {
   justify-content: center;
   flex-wrap: wrap;
 }
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
 body {
   /* solid background */
   background: rgb(0, 212, 255);

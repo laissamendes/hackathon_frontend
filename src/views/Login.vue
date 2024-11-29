@@ -1,4 +1,4 @@
-<script setup>
+<script >
 function reveal() {
   let reveals = document.querySelectorAll(".reveal");
 

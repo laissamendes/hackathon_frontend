@@ -17,49 +17,7 @@ export default {
   <div class="home">
     <div id="demo-modal" class="modal wrap">
     <div class="modal__content wrap">
-      <section>
-        <div class="card1">
-            <div class="card">
-                <div class="left-container">
-                  <img src="https://cdn.pixabay.com/photo/2020/10/19/09/44/woman-5667299__480.jpg" alt="Profile Image">
-                  <h2 class="gradienttext">John Doe</h2>
-                  <p>Web Developer</p>
-                </div>
-                <div class="right-container">
-                  <h3 class="gradienttext">Profile Details</h3>
-                  <table>
-                      <tr>
-                          <td>Name :</td>
-                          <td>John Doe</td>
-                        </tr>
-                    <tr>
-                      <td>Age :</td>
-                      <td>35</td>
-                    </tr>
-                    <tr>
-                      <td>Mobile :</td>
-                      <td>+91 XXXXXXXXXX</td>
-                    </tr>
-                    <tr>
-                      <td>Email :</td>
-                      <td>john@example.com</td>
-                    </tr>
-                    <tr>
-                      <td>Address :</td>
-                      <td>123 Main St, Anytown, USA</td>
-                    </tr>
-                  </table>
-                  <div class="social-icons">
-                    <a href="#"><i class="fa fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-github"></i></a>
-                  </div>
-                  <div class="credit">Made with <span style="color:tomato;font-size:20px;">❤ </span>by<a href="https://www.learningrobo.com/"> Learning Robo</a></div>
-                </div>
-              </div>
-        </div>
-    </section>
+
 
 
 
@@ -87,7 +45,7 @@ export default {
                   <option value="3">Terceiro</option>
                 </select>
               </div>
-              <p>Nota < 6</p>
+              <p>Nota menor q 6</p>
               <div class="form-floating mb-3">
 
                 <select class="form-select" aria-label="Default select example">
@@ -211,8 +169,7 @@ div {
   justify-content: center;
   flex-wrap: wrap;
 }
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
 body {
   /* solid background */
   background: rgb(0, 212, 255);
@@ -469,7 +426,7 @@ p {
 }
 
 section{
-    height:100vh;
+    height:80vh;
     width:100%;
     display: flex;
     flex-direction: column;
@@ -482,21 +439,13 @@ section::before,
     position: absolute;
     width: 200px;
     height: 200px;
-    border-radius: 50% 20px;
+    border-radius: 50% 0px;
     opacity:.8;
 }
 
-section::before{
-    top: 6%;
-    left: 75%;
-    background: linear-gradient(#AAFFA9, #11FFBD);
-}
 
-.card1::before{
-    bottom:2%;
-    left: 10%;
-    background: linear-gradient(#0098f0, #0457d3);
-}
+
+
 .card {
     display: flex;
     flex-direction: row;
@@ -547,6 +496,8 @@ section::before{
  section::before{
         top:4%;
         left:51%;
+    } .gradienttext{
+      opacity: 0px;
     }
   }
   @media only screen and (max-width: 600px) {
@@ -558,11 +509,24 @@ section::before{
     .left-container{
         flex: 1;
         max-width:100%;
+
     }
     .card1::before{
         bottom: -14%;
         left: 1%;
     }
+     h3{
+      opacity: 0;
+    }
+     a{
+      opacity: 0;
+    } .credit{
+       opacity: 0;
+      } .left-container{
+        margin: 0px;
+      } .right-container{
+        margin: 0px;
+      }
 
 
   }
@@ -570,13 +534,13 @@ section::before{
     border: double 5px transparent;
     border-radius: 50%;
     background-image: linear-gradient(white, white),
-                      linear-gradient(to right, #ee00ff,#fbff00);
+                      linear-gradient(to right, #ee00ff,#8d0f7c);
     background-origin: border-box;
     background-clip: content-box, border-box;
     width: 200px;
     height: 200px;
     max-width: 200px;
-    margin-top: 70px;
+    margin-top: 20px;
   }
 
   h2 {
@@ -589,36 +553,14 @@ section::before{
     margin-bottom: 5px;
   }
   .gradienttext{
-    background-image: linear-gradient(to right, #00c6ff 0%, #0072ff 100%);
+    background-image: linear-gradient(to right, #d804cd 0%, #0072ff 100%);
     color: transparent;
-    -webkit-background-clip: text;
-  }
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
   }
 
-  .social-icons a {
-    background-image: linear-gradient(to right, #00c6ff 0%, #0072ff 100%);
-    display: inline-block;
-    margin-right: 15px;
-    padding:15px ;
-    width:30px;
-    height:30px;
-    border-radius:30px;
-    text-align: center;
-  }
 
-  .social-icons i {
-    font-size: 24px;
-    color:rgba(255, 255, 255, .7);
-    transition: all 0.3s ease;
-  }
 
-  .social-icons i:hover {
-    color: rgba(255, 255, 255, 1);
-  }
+
 
 
   table {
@@ -644,7 +586,7 @@ section::before{
   }
   .credit a {
   text-decoration: none;
-  color: #fff;
+  color: #000000;
   font-weight: 800;
 }
 
