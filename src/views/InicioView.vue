@@ -1,7 +1,7 @@
 <script setup>
 
 import PreLoader from '@/components/PreLoader.vue';
-import Landing from '@/components/HomeVue.vue';
+import Inicio from '@/components/InicioVue.vue';
 
 
 
@@ -11,7 +11,7 @@ import Landing from '@/components/HomeVue.vue';
 <template>
 
     <PreLoader></PreLoader>
-    <Landing></Landing>
+    <Inicio></Inicio>
 
 
 
