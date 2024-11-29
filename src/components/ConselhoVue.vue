@@ -23,27 +23,25 @@ export default {
           <div class="container">
             <div class="wrapper">
               <h1></h1>
+              <p>Trimestre</p>
               <div class="form-floating mb-3">
-                <p>Trimestre</p>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="floatingInput"
-                  placeholder="name@example.com"
-                />
 
-                <label for="floatingInput">Trimestre</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">Primeiro</option>
+                  <option value="2">Segundo</option>
+                  <option value="3">Terceiro</option>
+                </select>
               </div>
-              <div class="form-floating">
-                <p>Turma</p>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="floatingPassword"
-                  placeholder="Password"
-                />
+              <p>Turma</p>
+              <div class="form-floating mb-3">
 
-                <label for="floatingPassword">Turma</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">3</option>
+                  <option value="2">2</option>
+                  <option value="3">1</option>
+                </select>
               </div>
             </div>
 
@@ -58,7 +56,7 @@ export default {
         <Tilt :options="this.options" parallax="true">
           <div class="container">
             <div class="wrapper">
-              <h1>Ocorrências</h1>
+              <p>Ocorrências</p>
               <div class="banner-image">
                 <svg xmlns="http://www.w3.org/2000/svg" class="cardback" viewBox="0 0 24 24">
                   <title>alert-circle</title>
@@ -165,6 +163,7 @@ container:active {
 }
 .wrapper {
   width: 252px;
+  flex-wrap: wrap;
 }
 .banner-image {
   background-image: url();
@@ -320,4 +319,15 @@ p {
     transform: translateY(50%);
   }
 }
+@media (max-width:720px){
+  div{
+    flex-wrap: nowrap;
+  }
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}}
+
 </style>
