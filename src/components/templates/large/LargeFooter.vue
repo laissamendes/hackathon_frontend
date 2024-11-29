@@ -30,7 +30,7 @@
   
   
   .footer{
-      position: fixed;
+      position: static;
       bottom: 0%;
       width: 100%;
   background:#000;
