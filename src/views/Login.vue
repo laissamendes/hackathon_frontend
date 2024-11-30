@@ -14,6 +14,8 @@ import '@passageidentity/passage-elements/passage-auth';
           <passage-auth app-id="PhLcRqDh8OaDNxTAnC4KQcda"></passage-auth>
 				</form>
 			</div>
+
+
 	</div>
 </body>
 </template>
@@ -27,9 +29,20 @@ body{
 	align-items: center;
 	min-height: 100vh;
   width: 100%;
-	background-image: linear-gradient(10deg, rgba(191, 135, 255, 0.699) 20%, rgba(111, 0, 255, 0.692) 100%);
+	font-family: 'Jost', sans-serif;
+	background-image: linear-gradient(10deg, rgba(116, 125, 195, 0.699) 20%, rgba(85, 27, 35, 0.692) 100%), url("../assets/images/fundo.png");
   background-position: center;
   background-size: cover;
+}
+.main{
+	width: 350px;
+	height: 500px;
+	background: red;
+	overflow: hidden;
+	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+    border: solid 3px #fff;
 }
 #chk{
 	display: none;
