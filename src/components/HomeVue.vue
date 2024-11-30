@@ -40,7 +40,7 @@ import { onMounted } from 'vue';
         <div class="textos-hero">
             <h1 style="color: #fff; font-size: 5.0rem; ">Bem vindo</h1>
 
-            <a href="#sec"> </a>
+            
         </div>
         <div class="svg-hero"  style="height: 150px; overflow: hidden; "><svg viewBox="0 0 500 150" preserveAspectRatio="none"
                 style="height: 100%; width: 100%;">
