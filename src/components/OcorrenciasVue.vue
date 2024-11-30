@@ -27,8 +27,6 @@ const options = ref({ gyroscope: true })
     <div id="demo-modal" class="modal wrap">
       <div class="modal__content wrap">
         <div class="card-container">
-
-<img class="round" src="" alt="user" />
 <h3>Daniela Venturi</h3>
 <p>3 info 3          Matrícula:2022328908 </p>
 <p>
@@ -128,6 +126,7 @@ Daniela Venturi
 <style scoped>
 h3 {
   margin: 10px 0;
+  color: #fffff;
 }
 
 h6 {
@@ -138,13 +137,14 @@ h6 {
 p {
   font-size: 14px;
   line-height: 21px;
+  color: #ffffff;
 }
 
 .card-container {
   background-color: #8739fa;
   border-radius: 5px;
   box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
-  color: #b3b8cd;
+  color: #ffffff;
   padding-top: 30px;
   position: relative;
   width: 600px;
@@ -155,7 +155,7 @@ p {
 
 .card-container .pro {
   color: #8739fa;;
-  background-color: #febb0b;
+  background-color: #ffffff;
   border-radius: 3px;
   font-size: 14px;
   font-weight: bold;
