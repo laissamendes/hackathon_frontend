@@ -1,17 +1,5 @@
 <script>
-import Tilt from 'vanilla-tilt-vue'
 
-export default {
-  name: 'App',
-  components: {
-    Tilt,
-  },
-  data: function () {
-    return {
-      options: { gyroscope: true },
-    }
-  },
-}
 </script>
 <template>
   <div class="home">
@@ -39,7 +27,7 @@ export default {
     <label for="exampleFormControlTextarea1"><h1>Como foi o trimestre:</h1></label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
-  
+
 </form>
 
 

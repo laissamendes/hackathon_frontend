@@ -2,17 +2,17 @@ import axios from 'axios';
 
 export default class ConselhoClasseService {
   async getConselhoClasse() {
-    const response = await axios.get('/ConselhosdeClasse/');
+    const response = await axios.get('/conselho-classe/');
     return response.data;
   }
 
-  async atualizarAluno(ConselhoClasse) {
-    const response = await axios.put(`/ConselhosdeClasse/${ConselhoClasse.id}/`, ConselhoClasse);
+  async atualizarConselhoClasse(ConselhoClasse) {
+    const response = await axios.put(`/conselho-classe/${ConselhoClasse.id}/`, ConselhoClasse);
     return response.data;
   }
 
-  async getAlunoPorId(id) {
-    const response = await axios.get(`/ConselhosdeClasse/${id}/`);
+  async getConselhoClassePorId(id) {
+    const response = await axios.get(`/conselho-classe/${id}/`);
     return response.data;
   }
 

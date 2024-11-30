@@ -7,50 +7,24 @@ const conselhoClasseService = new ConselhoClasseService();
 export const useConselhoClassseStore = defineStore('conselhoClasse', () => {
   const concelhoClasse = ref([]);
 
-  async function getConcelhoClasse() {
+  async function getConselhoClasse() {
     try {
-      const response = await conselhoClasseService.getConcelhoClasse();
+      const response = await conselhoClasseService.getConselhoClasse();
       concelhoClasse.value = response.results;
     } catch (error) {
       console.error('Erro ao buscar concelhoClasse:', error);
     }
   }
 
-  // async function getProdutosByCategoria(categoria_id) {
-  //   try {
-  //     concelhoClasse.value = await conselhoClasseService.getProdutosByCategoria(categoria_id);
-  //   } catch (error) {
-  //     console.error('Erro ao buscar concelhoClasse por categoria:', error);
-  //   }
-  // }
-
-  // async function adicionarAluno(conselhoClasse) {
-  //   try {
-  //     const response = await conselhoClasseService.createAluno(conselhoClasse);
-  //     concelhoClasse.value.push(response);
-  //     await getConcelhoClasse();
-  //   } catch (error) {
-  //     console.error('Erro ao adicionar conselhoClasse:', error);
-  //   }
-  // }
-
-  async function atualizarConcelhoClasse(conselhoClasse) {
+  async function atualizarConselhoClasse(conselhoClasse) {
     try {
-      await conselhoClasseService.atualizarConcelhoClasse(conselhoClasse);
-      await getConcelhoClasse();
+      await conselhoClasseService.atualizarConselhoClasse(conselhoClasse);
+      await getConselhoClasse();
     } catch (error) {
       console.error('Erro ao atualizar conselhoClasse:', error);
     }
   }
 
-  // async function excluirAluno(id) {
-  //   try {
-  //     await conselhoClasseService.excluirAluno(id);
-  //     await getConcelhoClasse();
-  //   } catch (error) {
-  //     console.error('Erro ao excluir conselhoClasse:', error);
-  //   }
-  // }
   async function getConselhoClassePorId(id) {
     try {
       const conselhoClasse = await conselhoClasseService.getConselhoClassePorId(id);
@@ -62,8 +36,8 @@ export const useConselhoClassseStore = defineStore('conselhoClasse', () => {
 
 
   return {
-    getConcelhoClasse,
-    atualizarConcelhoClasse,
+    getConselhoClasse,
+    atualizarConselhoClasse,
     getConselhoClassePorId,
   };
 });

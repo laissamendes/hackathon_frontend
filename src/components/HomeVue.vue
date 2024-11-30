@@ -18,15 +18,15 @@ function reveal() {
 window.addEventListener("scroll", reveal);
 
 
-import { onMounted } from 'vue';
+// import { onMounted } from 'vue';
 
-    import Rellax from 'rellax'
+//     import Rellax from 'rellax'
 
-    onMounted(() => {
-      let rellax = new Rellax('.rellax');
+//     onMounted(() => {
+//       let rellax = new Rellax('.rellax');
 
 
-  });
+//   });
 
   import Tilt from 'vanilla-tilt-vue'
 export default {
