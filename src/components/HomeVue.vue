@@ -150,7 +150,7 @@ import { onMounted } from 'vue';
 						</div>
 						<div>
 							<div class="image fit">
-								<a href="#"><img src="../assets/images/fundo.png" alt="" width="600" height="300"></a>
+								<a href="#"><img src="../assets/images/init6.png" alt="" width="600" height="300"></a>
 							</div>
 						</div>
 						<div>
