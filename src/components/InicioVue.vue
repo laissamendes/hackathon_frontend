@@ -73,7 +73,7 @@
   /* display: flex;
   align-items: center;
   justify-content: center; */
-  
+
 }
 
 .container1 {
@@ -213,9 +213,6 @@ input[type="radio"] {
   width: 100%;
 }
 
-.p-one {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(@/assets/img/sads.png);
-}
 
 .p-one1 {
   width: 100%;
