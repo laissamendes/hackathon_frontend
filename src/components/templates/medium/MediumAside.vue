@@ -40,8 +40,9 @@ onBeforeRouteUpdate(() => {
   top: 0;
   width: 100%;
   box-shadow: 0 4px 20px hsla(207, 24%, 35%, 0.1);
-  background-color: #151418;
+  background-color: #6e48a7;
   z-index: 1;
+  border-bottom: solid 2px #fff;
 }
 
 nav {

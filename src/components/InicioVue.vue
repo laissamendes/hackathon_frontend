@@ -32,7 +32,7 @@ export default {
             </div>
 
             <div class="button-wrapper">
-              <button class="btn fill">DETAILS</button>
+              <button  class="btn fill"> <a href="/addocorrencia">DETAILS</a></button>
 
             </div>
           </div>
@@ -50,7 +50,7 @@ export default {
             </div>
 
             <div class="button-wrapper">
-              <button class="btn outline">DETAILS</button>
+              <button class="btn outline"><a href="/conselho">DETAILS</a></button>
 
             </div>
           </div>
@@ -68,7 +68,7 @@ export default {
             </div>
 
             <div class="button-wrapper">
-              <button class="btn outline">DETAILS</button>
+              <button class="btn outline"> <a href="/preconselho">DETAILS</a></button>
 
             </div>
           </div>
@@ -196,7 +196,7 @@ container:active {
   border-radius: 12px;
 }
 h1 {
-  font-family: 'Righteous', sans-serif;
+
   color: #8739fa;
   text-transform: uppercase;
   font-size: 1.4rem;
@@ -204,7 +204,7 @@ h1 {
 }
 p {
   color: #fff;
-  font-family: 'Lato', sans-serif;
+
   text-align: center;
   font-size: 0.8rem;
   line-height: 150%;
@@ -270,7 +270,6 @@ p {
   padding: 0.5em 2em;
   justify-self: center;
   font-size: 1.2rem;
-  font-family: 'Magisho', sans-serif;
   width: 13em;
   position: relative;
   cursor: pointer;
@@ -337,7 +336,7 @@ p {
 @media only screen and (max-width: 600px) {
   .buttons {
     transform: translateY(50%);
-    
+
   }.home{
 
     flex-direction: column;

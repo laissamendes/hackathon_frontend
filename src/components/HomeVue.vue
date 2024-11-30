@@ -1,7 +1,3 @@
-<script>
-
-
-// Import Swiper Vue.js components
 
 function reveal() {
   let reveals = document.querySelectorAll(".reveal");
@@ -10,6 +6,7 @@ function reveal() {
     let windowHeight = window.innerHeight;
     let elementTop = reveals[i].getBoundingClientRect().top;
     let elementVisible = 150;
+
 
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("active");
@@ -40,31 +37,22 @@ import { onMounted } from 'vue';
 <template>
   <body>
     <header class="hero" >
+      <img src="../assets/" alt="">
         <div class="textos-hero">
             <h1>Título</h1>
 
-            <a href="">Entrar</a>
             <a href="#sec">Ir</a>
-
-
         </div>
         <div class="svg-hero"  style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
                 style="height: 100%; width: 100%;">
                 <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                    style="stroke: none; fill: #fff;"></path>
+                    style="stroke: none; fill: #8739fa;"></path>
         </svg></div>
     </header>
 
-    <section id="sec" class="wave-conteudo website" >
 
-        <div class="conteudo-textos-main">
-            <h2 class="titulo left"><strong>Título</strong></h2>
-            <p class="paragrafo">Lorem ipsum dolor sit amet consectetur <span>span span span span span span</span>  debitis fuga doloribus soluta, asperiores eos ad labore nostrum nihil accusantium recusandae. Possimus maxime culpa nobis aliquid corporis voluptate?</p>
 
-        </div>
-    </section>
-
-    <section class="info">
+    <section id="sec" class="info">
         <div class="container">
 
 	<div class="limiter reveal">
@@ -83,8 +71,9 @@ import { onMounted } from 'vue';
 					</span>
 
           <div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Docente
+						<button class="login100-form-btn" >
+              <a href="/inicio">Docente</a>
+
 						</button>
 					</div>
 					<div class="container-login100-form-btn">
@@ -106,7 +95,7 @@ import { onMounted } from 'vue';
     <section class="info-last">
         <div class="container last-section">
             <div class="container-textos-main">
-     
+
             </div>
 
         </div>
@@ -138,17 +127,8 @@ opacity: 1;
     box-sizing: border-box;
 }
 
-html{
-    scroll-behavior: smooth;
-}
-
-body{
-    font-family: 'Raleway', sans-serif;
-    box-sizing: border-box;
-}
-
 .hero{
-    background-image: linear-gradient(10deg, rgba(116, 125, 195, 0.699) 20%, rgba(85, 27, 35, 0.692) 100%), url("../assets/images/walp.png");
+    background-image: linear-gradient(10deg, rgba(116, 125, 195, 0.699) 20%, rgba(85, 27, 35, 0.692) 100%), url("../assets/images/init2.jpg");
     width: 100%;
     height: 650px;
     background-repeat: no-repeat;
@@ -178,16 +158,19 @@ body{
 }
 
 .textos-hero a{
+  justify-content: center;
+  align-items: center;
     display: inline-block;
     text-decoration: none;
-    padding: 12px 15px;
+    padding: 10px 45px;
     background: #a18cd1;
     border-radius: 8px;
     color: #fff;
 }
 
 .textos-hero a:hover{
-    background: #645583;
+    background: rgb(176, 150, 228);
+    border: solid 3px #fff;
 }
 
 .svg-hero{
@@ -201,7 +184,7 @@ body{
 /* Estilos gerais */
 
 section{
-  background: #fff;
+  background: #8739fa;
   color: #000;
 }
 
@@ -218,7 +201,7 @@ section{
 }
 
 span {
-    color: #ee9106;
+    color: #9b138f;
 }
 .container{
     padding: 90px 90px;
@@ -265,20 +248,6 @@ span {
     text-align: justify;
     margin-bottom: 20px;
     font-size: 20px;
-}
-
-.cta{
-    display: inline-block;
-    text-decoration: none;
-    background-image: linear-gradient(45deg, #ee3478 0%, #dc662b 99%, #e6dcd9 100%);
-    padding: 12px 15px;
-    border-radius: 8px;
-    color: #fff;
-    margin: 10px;
-}
-
-.cta:hover {
-    background: linear-gradient(45deg, #e4719b 0%, #d48862 99%, #e6dcd9 100%);
 }
 
 /* Info */
@@ -441,11 +410,6 @@ a {
 
 a:focus {
 	outline: none !important;
-}
-
-a:hover {
-	text-decoration: none;
-  color: #57b846;
 }
 
 /*---------------------------------------------*/
@@ -774,65 +738,7 @@ iframe {
 }
 
 
-/*------------------------------------------------------------------
-[ Alert validate ]*/
 
-.validate-input {
-  position: relative;
-}
-
-.alert-validate::before {
-  content: attr(data-validate);
-  position: absolute;
-  max-width: 70%;
-  background-color: white;
-  border: 1px solid #c80000;
-  border-radius: 13px;
-  padding: 4px 25px 4px 10px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 8px;
-  pointer-events: none;
-
-  font-family: Poppins-Medium;
-  color: #c80000;
-  font-size: 13px;
-  line-height: 1.4;
-  text-align: left;
-
-  visibility: hidden;
-  opacity: 0;
-
-  -webkit-transition: opacity 0.4s;
-  -o-transition: opacity 0.4s;
-  -moz-transition: opacity 0.4s;
-  transition: opacity 0.4s;
-}
-
-.alert-validate::after {
-  content: "\f06a";
-  font-family: FontAwesome;
-  display: block;
-  position: absolute;
-  color: #c80000;
-  font-size: 15px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 13px;
-}
-
-.alert-validate:hover:before {
-  visibility: visible;
-  opacity: 1;
-}
 
 @media (max-width: 992px) {
   .alert-validate::before {

@@ -11,7 +11,7 @@
 
 
   <div class="row">
-  INFERNO Copyright © 2021 Inferno - All rights reserved ||
+  Empresa Copyright © 2024 Empresa - All rights reserved ||
   </div>
   </div>
   </footer>
@@ -26,30 +26,31 @@
 
 
   .footer{
-    
-  background:#000;
+
+  background:#ffffff;
   padding: 20px 0px;
   font-family: 'Play', sans-serif;
   text-align:center;
   z-index: 1000;
+  border-top: solid 2px #000;
   }
 
   .footer .row{
   width:100%;
   padding:1px;
-  color:gray;
+  color:rgb(0, 0, 0);
   font-size:0.8em;
   }
 
   .footer .row a{
   text-decoration:none;
-  color:gray;
+  color:rgb(0, 0, 0);
   transition:0.5s;
   margin: 2px;
   }
 
   .footer .row a:hover{
-  color:#fff;
+  color:#696868;
   }
 
   .footer .row ul{
