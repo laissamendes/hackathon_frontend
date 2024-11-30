@@ -40,7 +40,7 @@ import { onMounted } from 'vue';
         <div class="textos-hero">
             <h1 style="color: #fff; font-size: 5.0rem; ">Bem vindo</h1>
 
-            <a href="#sec">Ir</a>
+            <a href="#sec"> </a>
         </div>
         <div class="svg-hero"  style="height: 150px; overflow: hidden; "><svg viewBox="0 0 500 150" preserveAspectRatio="none"
                 style="height: 100%; width: 100%;">
@@ -128,13 +128,13 @@ import { onMounted } from 'vue';
 			</section>
 			<!-- Two -->
 			 <section id="two" class="wrapper style3"><div class="inner">
-					<header class="align-center"><p>Nam vel ante sit amet libero scelerisque facilisis eleifend vitae urna</p>
-						<h2>Morbi maximus justo</h2>
+					<header class="align-center"><p></p>
+						<h2>Hackaton 2024</h2>
 					</header></div>
 			</section>
 			<!-- Three -->
 			<section id="three" class="wrapper style2"><div class="inner">
-					<header class="align-center"><p class="special">sendo sincero eu n sei oq botar</p>
+					<header class="align-center"><p class="special"></p>
 						<h2>Professores e Alunos</h2>
 					</header><div class="gallery">
 						<div>
