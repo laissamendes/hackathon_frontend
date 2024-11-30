@@ -3,8 +3,24 @@ import { ref } from 'vue';
 import Tilt from 'vanilla-tilt-vue';
 import { onMounted } from 'vue';
 import { useOcorrenciaStore } from '@/stores/ocorrencia.js';
+import { useDisciplinaStore } from '@/stores/disciplina.js';
+import { useAlunoStore } from '@/stores/aluno.js';
+import { useTurmaStore } from '@/stores/turma'
 
-// import { formatDescription, formatPrice, formatTitle } from '@/helpers/format';
+
+const turmaStore = useTurmaStore()
+
+
+const disciplinaStore = useDisciplinaStore();
+const disciplina = ref({
+  nome: '',
+});
+
+const alunoStore = useAlunoStore();
+const aluno = ref({
+  nome: '',
+});
+
 
 const ocorrenciaStore = useOcorrenciaStore();
 const ocorrencia = ref({
@@ -22,6 +38,28 @@ onMounted(async () => {
   await getOcorrencia();
 });
 
+async function getDisciplina() {
+  await disciplinaStore.getDisciplina();
+}
+
+onMounted(async () => {
+  await getDisciplina();
+});
+
+async function getAluno() {
+  await alunoStore.getAluno();
+}
+
+onMounted(async () => {
+  await getAluno();
+});
+
+onMounted(async () => {
+  await turmaStore.getTurmas()
+})
+
+
+
 const options = ref({ gyroscope: true });
 </script>
 <template>
@@ -32,8 +70,11 @@ const options = ref({ gyroscope: true });
       <div class="card-container">
 
 	<img class="round" src="" alt="user" />
-	<h3>Rodolfinho</h3>
-	<p>Turma                    Numero matrícula<br/> email </p>
+	<h3>Daniela Venturi</h3>
+	<p>3 info 3          Matrícula:2022328908 </p>
+  <p>
+    email:danielaventuriifc@gmail.com
+  </p>
 
 	<div class="skills">
 		<table class="minha-tabela">
@@ -87,30 +128,32 @@ const options = ref({ gyroscope: true });
               <p>Turma</p>
               <div class="form-floating mb-3">
 
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Selecione a Turma</option>
-                  <option value="1">Primeiro</option>
-                  <option value="2">Segundo</option>
-                  <option value="3">Terceiro</option>
-                </select>
+                <select class="form-control" id="turmaSelect">
+        <option
+          v-for="turma in turmaStore.turmas"
+          :key="turma.id"
+          :value="turma.id" >
+          {{ turma.nome }}
+        </option>
+      </select>
               </div>
               <p>Nota dos alunos</p>
               <div class="form-floating mb-3">
 
                 <select class="form-select" aria-label="Default select example">
-                  <option selected>Selecione a nota</option>
+                  <option selected>Todas</option>
                   <option value="1">Menor que 6</option>
                   <option value="2">Maior que 6</option>
-                  <option value="3">Todos</option>
+
                 </select>
               </div>
               <div class="form-floating mb-3">
                 <p>Trimestre</p>
 <select class="form-select" aria-label="Default select example">
-  <option selected>Selecione o Trimestre</option>
+  <option selected>Terceiro</option>
   <option value="1">Primeiro</option>
   <option value="2">Segindo</option>
-  <option value="3">Terceiro</option>
+
 </select>
 </div>
             </div>
@@ -130,9 +173,12 @@ const options = ref({ gyroscope: true });
           <div class="container">
             <div class="wrapper">
               <p>Alunos</p>
-              <div class="banner-image">
+              <div  class="banner-image" >
                 <button href="#demo-modal" type="button"  style="height: 50px; border: none;">
-                  Rodolfinho
+
+Daniela Venturi
+
+
                   <a class="btn btn-primary btn-lg" href="#demo-modal">Visualizar</a></button>
               </div>
             </div>
@@ -161,13 +207,13 @@ p {
 }
 
 .card-container {
-	background-color: #231E39;
+	background-color: #8739fa;
 	border-radius: 5px;
 	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
 	color: #B3B8CD;
 	padding-top: 30px;
 	position: relative;
-	width: 350px;
+	width: 600px;
 	max-width: 100%;
 	text-align: center;
   bottom: 40px;
@@ -188,7 +234,7 @@ p {
 .card-container .round {
 	border: 1px solid #03BFCB;
 	border-radius: 50%;
-	padding: 7px;
+	padding: 3px;
 }
 
 button.primary {
@@ -274,9 +320,10 @@ button.primary.ghost {
 .modal__content {
   border-radius: 4px;
   position: relative;
-  max-width: 90%;
+  max-width: 100%;
   background: #fff;
   padding: 1em 2em;
+  width: 700px;
 }
 
 .modal__footer {
@@ -306,7 +353,7 @@ body {
   background: rgb(0, 212, 255);
 
   /* gradient background*/
-  background: linear-gradient(45deg, rgba(0, 212, 255, 1) 0%, rgba(11, 3, 45, 1) 100%);
+  background: linear-gradient(45deg, rgb(2, 43, 52) 0%, rgba(11, 3, 45, 1) 100%);
 
   /* photo background */
   background-size: cover;
@@ -328,7 +375,7 @@ body {
 }
 
 .container {
-  width: 440px;
+  width: 540px;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: #dddddd;
@@ -468,7 +515,7 @@ p {
   justify-self: center;
   font-size: 1.2rem;
 
-  width: 13em;
+  width: 16em;
   position: relative;
   cursor: pointer;
   border-radius: 0.4em;
@@ -563,7 +610,7 @@ p {
 .minha-tabela {
   width: 100%;
   border-collapse: collapse; /* Remove espaços entre as células */
-  font-family: Arial, sans-serif; /* Define a fonte */
+
 }
 
 /* Estilo das células de cabeçalho */
