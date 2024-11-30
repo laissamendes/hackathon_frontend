@@ -19,7 +19,7 @@ onBeforeRouteUpdate(() => {
     <ul class="menu">
       <li><a href="/">Home</a></li>
       <li><a href="/login">Login</a></li>
-      <li><a href="#">Sobre</a></li>
+      <li><a href="#one">Sobre</a></li>
       <li><a href="/Contato">Contato</a></li>
       <router-link class="btn outline" to="/addocorrencia" >Adicionar Ocorrência</router-link>
     </ul>

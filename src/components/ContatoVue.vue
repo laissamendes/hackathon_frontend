@@ -1,6 +1,6 @@
 <template>
 
-
+<div class="center">
   <div class="container">
     <div class="content">
       <div class="left-side">
@@ -34,6 +34,7 @@
           <input type="text" placeholder="Enter your email">
         </div>
         <div class="input-box message-box">
+          <textarea>Some text...</textarea>
 
         </div>
         <div class="button">
@@ -43,6 +44,7 @@
     </div>
     </div>
   </div>
+</div>
 
 </template>
 
@@ -53,8 +55,31 @@
   box-sizing: border-box;
   font-family: "Poppins" , sans-serif;
 }
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+textarea:hover{
+  background-color: #9b9797;
+}
+
+.input-box{
+  background-color: #9b9797;
+}
+.center{
+  display: flex;
+  justify-content: center;
+
+}
 body{
-  
+
   width: 100%;
   background: #c8e8e9;
   display: flex;
