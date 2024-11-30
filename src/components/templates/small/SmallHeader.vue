@@ -12,17 +12,19 @@ onBeforeRouteUpdate(() => {
   <header class="header">
   <nav>
     <div class="logo">
-      <a href="index.html"><span>Teste</span>Teste</a>
+      <img style="width: 80px;" src="../../../assets/images/logo.jpg" alt="">
     </div>
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-icon">&#9776;</label>
     <ul class="menu">
-      <li><a href="/">Inicio</a></li>
-      <li><a href="/login">Login</a></li>
-      <li><a href="#one">Sobre</a></li>
-      <li><a href="/Contato">Contato</a></li>
-      <router-link class="btn outline" to="/historico" >Historico</router-link>
-      <router-link class="btn outline" to="/inicio" >Opções</router-link>
+
+    <router-link to="/">Home</router-link>
+    <router-link to="/login">Login</router-link>
+    <router-link to="/contato">Contato</router-link>
+    <router-link :to="{ name: 'home', hash: '#sec' }">Conselho</router-link>
+    <router-link to="/ocorrencia" >Ocorrência</router-link>
+    <router-link to="/preconselho">Pré Conselho</router-link>
+
     </ul>
   </nav>
 </header>
@@ -32,6 +34,7 @@ onBeforeRouteUpdate(() => {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
   text-decoration: none;
   list-style: none;
 }
@@ -41,21 +44,23 @@ onBeforeRouteUpdate(() => {
   top: 0;
   width: 100%;
   box-shadow: 0 4px 20px hsla(207, 24%, 35%, 0.1);
-  background-color: #151418;
+  background-color: #ffffff;
   z-index: 1;
+  border-bottom: solid 2px #636161;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
+  padding: 0px 30px;
 }
 
 .logo a {
   font-size: 24px;
   font-weight: bold;
-  color: #fff;
+  color: #000000;
 }
 
 .logo a span {
@@ -74,7 +79,7 @@ nav {
   font-size: 17px;
   font-weight: 500;
   transition: 0.2s all ease-in-out;
-  color: #fff;
+  color: #000000;
 }
 
 .menu:hover a {
@@ -83,7 +88,7 @@ nav {
 
 .menu a:hover {
   opacity: 1;
-  color: #fff;
+  color: #8739fa;
 }
 
 .menu-icon {
@@ -124,7 +129,7 @@ nav {
 
   .menu-icon {
     display: block;
-    color: #fff;
+    color: #030303;
     font-size: 28px;
     cursor: pointer;
   }

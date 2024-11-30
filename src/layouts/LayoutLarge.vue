@@ -19,25 +19,24 @@ import LargeAside from '@/components/templates/large/LargeAside.vue'
 
 <style scoped>
 #layout-large {
-
+display: flex;
+flex-direction: column;
 width: 100%;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr auto;
   grid-template-areas:
-    'aside main'
-    'aside footer';
-
+    'aside'
+    'main';
 }
-
-
 
 aside {
   grid-area: aside;
 }
 
 main {
-  min-height: 80%;
+  min-height: 100%;
+  width: 100vw;
   padding: 0rem;
-  grid-area: main;
+  /* grid-area: main; */
 }
 
 </style>

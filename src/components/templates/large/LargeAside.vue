@@ -21,7 +21,7 @@ onBeforeRouteUpdate(() => {
     <router-link to="/">Home</router-link>
     <router-link to="/login">Login</router-link>
     <router-link to="/contato">Contato</router-link>
-    <router-link to="/conselho">Conselho</router-link>
+    <router-link :to="{ name: 'home', hash: '#sec' }">Conselho</router-link>
     <router-link to="/ocorrencia" >Ocorrência</router-link>
     <router-link to="/preconselho">Pré Conselho</router-link>
 

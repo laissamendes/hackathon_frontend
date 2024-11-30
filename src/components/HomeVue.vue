@@ -39,8 +39,12 @@ import { onMounted } from 'vue';
     <header class="hero" >
         <div class="textos-hero">
             <h1 style="color: #fff; font-size: 5.0rem; ">Bem vindo</h1>
+            
 
-            <a href="#sec">Ir</a>
+
+
+
+
         </div>
         <div class="svg-hero"  style="height: 150px; overflow: hidden; "><svg viewBox="0 0 500 150" preserveAspectRatio="none"
                 style="height: 100%; width: 100%;">
@@ -453,12 +457,12 @@ span {
 
 body, html {
 	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
+
 }
 
 /*---------------------------------------------*/
 a {
-	font-family: Poppins-Regular;
+
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -479,7 +483,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-	font-family: Poppins-Regular;
+
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -546,14 +550,14 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {
-  font-family: Poppins-Regular;
+
   font-size: 13px;
   line-height: 1.5;
   color: #999999;
 }
 
 .txt2 {
-  font-family: Poppins-Regular;
+
   font-size: 13px;
   line-height: 1.5;
   color: #666666;
@@ -614,8 +618,8 @@ iframe {
 }
 
 .login100-form-title {
-  font-family: Poppins-Bold;
-  font-size: 24px;
+
+  font-size: 44px;
   color: #333333;
   line-height: 1.2;
   text-align: center;
@@ -635,7 +639,6 @@ iframe {
 }
 
 .input100 {
-  font-family: Poppins-Medium;
   font-size: 15px;
   line-height: 1.5;
   color: #666666;
@@ -728,7 +731,6 @@ iframe {
 }
 
 .login100-form-btn {
-  font-family: Montserrat-Bold;
   font-size: 15px;
   line-height: 1.5;
   color: #fff;
@@ -2454,7 +2456,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	}
 
 	body, input, select, textarea {
-		font-family: "Poppins", sans-serif;
+
 		font-weight: 300;
 		font-size: 1rem;
 		line-height: 1.65;
@@ -2554,7 +2556,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	code {
 		border-radius: 2px;
 		border: solid 1px;
-		font-family: "Courier New", monospace;
+
 		font-size: 0.9rem;
 		margin: 0 0.25rem;
 		padding: 0.25rem 0.65rem;
@@ -2562,7 +2564,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 	pre {
 		-webkit-overflow-scrolling: touch;
-		font-family: "Courier New", monospace;
+
 		font-size: 0.9rem;
 		margin: 0 0 2rem 0;
 	}
@@ -2928,7 +2930,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		.select-wrapper:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
+
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -2992,7 +2994,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 			input[type="radio"] + label:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
+
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
@@ -3127,7 +3129,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
+
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -4593,7 +4595,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 					content: "";
 					-moz-osx-font-smoothing: grayscale;
 					-webkit-font-smoothing: antialiased;
-					font-family: FontAwesome;
+
 					font-style: normal;
 					font-weight: normal;
 					text-transform: none !important;
