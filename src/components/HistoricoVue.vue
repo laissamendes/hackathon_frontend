@@ -7,8 +7,6 @@ import { useOcorrenciaStore } from '@/stores/ocorrencia.js';
 // import { formatDescription, formatPrice, formatTitle } from '@/helpers/format';
 
 const ocorrenciaStore = useOcorrenciaStore();
-const ocorrencia = ref(null);
-
 
 async function getOcorrencia() {
   await ocorrenciaStore.getOcorrencia();

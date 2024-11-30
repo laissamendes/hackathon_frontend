@@ -21,6 +21,7 @@ onBeforeRouteUpdate(() => {
       <li><a href="/login">Login</a></li>
       <li><a href="#">Sobre</a></li>
       <li><a href="#">Connect</a></li>
+      <router-link class="btn outline" to="/addocorrencia" >Adicionar Ocorrência</router-link>
     </ul>
   </nav>
 </header>

@@ -78,7 +78,7 @@ import { onMounted } from 'vue';
 						</button>
 					</div>
 					<div class="container-login100-form-btn">
-            <router-link class="login100-form-btn" to="/preConselho" >Doscente</router-link>
+            <router-link class="login100-form-btn" to="/preConselho" >Discente</router-link>
 					</div>
 
 
