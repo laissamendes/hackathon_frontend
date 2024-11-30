@@ -12,7 +12,7 @@ onBeforeRouteUpdate(() => {
   <header class="header">
   <nav>
     <div class="logo">
-      <a href="index.html"><span>Teste</span>Teste</a>
+      <img style="width: 80px;" src="../../../assets/images/logo.jpg" alt="">
     </div>
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-icon">&#9776;</label>
@@ -40,22 +40,23 @@ onBeforeRouteUpdate(() => {
   top: 0;
   width: 100%;
   box-shadow: 0 4px 20px hsla(207, 24%, 35%, 0.1);
-  background-color: #6e48a7;
+  background-color: #ffffff;
   z-index: 1;
-  border-bottom: solid 2px #fff;
+  border-bottom: solid 2px #636161;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
+  padding: 0px 30px;
 }
 
 .logo a {
   font-size: 24px;
   font-weight: bold;
-  color: #fff;
+  color: #000000;
 }
 
 .logo a span {
@@ -74,7 +75,7 @@ nav {
   font-size: 17px;
   font-weight: 500;
   transition: 0.2s all ease-in-out;
-  color: #fff;
+  color: #000000;
 }
 
 .menu:hover a {
@@ -83,7 +84,7 @@ nav {
 
 .menu a:hover {
   opacity: 1;
-  color: #fff;
+  color: #8739fa;
 }
 
 .menu-icon {

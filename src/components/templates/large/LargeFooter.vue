@@ -32,6 +32,7 @@
   z-index: 100;
   top: 100%;
   border-top: solid 2px #000;
+  
   }
 
   .footer .row{
