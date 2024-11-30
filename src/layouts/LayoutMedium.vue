@@ -1,7 +1,6 @@
 <script setup>
 
 import MediumAside from '@/components/templates/medium/MediumAside.vue'
-import MediumFooter from '@/components/templates/medium/MediumFooter.vue'
 </script>
 
 <template>
@@ -13,9 +12,7 @@ import MediumFooter from '@/components/templates/medium/MediumFooter.vue'
     <main>
       <router-view />
     </main>
-    <footer>
-      <medium-footer />
-    </footer>
+
   </div>
 </template>
 
@@ -36,7 +33,7 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
+
   grid-area: aside;
 }
 

@@ -28,11 +28,10 @@
       width: 100%;
   background:#ffffff;
   padding: 20px 00px;
-  font-family: 'Play', sans-serif;
   text-align:center;
   z-index: 100;
-  top: 85%;
-  border: solid 2px #000;
+  top: 100%;
+  border-top: solid 2px #000;
   }
 
   .footer .row{

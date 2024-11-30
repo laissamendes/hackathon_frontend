@@ -50,16 +50,9 @@ import { onMounted } from 'vue';
         </svg></div>
     </header>
 
-    <section id="sec" class="wave-conteudo website" >
 
-        <div class="conteudo-textos-main">
-            <h2 class="titulo left"><strong>Título</strong></h2>
-            <p class="paragrafo">Lorem ipsum dolor sit amet consectetur <span>span span span span span span</span>  debitis fuga doloribus soluta, asperiores eos ad labore nostrum nihil accusantium recusandae. Possimus maxime culpa nobis aliquid corporis voluptate?</p>
 
-        </div>
-    </section>
-
-    <section class="info">
+    <section id="sec" class="info">
         <div class="container">
 
 	<div class="limiter reveal">
@@ -78,8 +71,9 @@ import { onMounted } from 'vue';
 					</span>
 
           <div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Docente
+						<button class="login100-form-btn" >
+              <a href="/inicio">Docente</a>
+
 						</button>
 					</div>
 					<div class="container-login100-form-btn">

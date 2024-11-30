@@ -30,7 +30,6 @@ onBeforeRouteUpdate(() => {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
   text-decoration: none;
   list-style: none;
 }
