@@ -4,10 +4,13 @@ import HomeView from '../views/HomeView.vue';
 import Login from '../views/Login.vue';
 import Inicio from '../views/InicioView.vue';
 import Conselho from '../views/ConselhoView.vue';
-import AddOcorrencia from '../views/AddOcorrenciaView.vue';
 import PreConselho from '../views/PreConselhoView.vue';
 import AboutView from '../views/AboutView.vue';
+
+import AddOcorrencia from '@/components/AddOcorrenciaVue.vue';
+
 import Ocorrencia from '../views/Ocorrencia.vue';
+
 
 
 const router = createRouter({

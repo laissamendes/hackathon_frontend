@@ -75,7 +75,7 @@ const titulo = ref('Formulário de Cadastro de Produtos')
               <p>Trimestre</p>
               <div class="form-floating mb-3">
                 <select class="form-select" aria-label="Default select example">
-                  <option selected>Open this select menu</option>
+                  <option selected>Selecione o Trimestre</option>
                   <h1>{{ titulo }}</h1>
                   <option value="1">Primeiro</option>
                   <option value="2">Segundo</option>
@@ -85,7 +85,7 @@ const titulo = ref('Formulário de Cadastro de Produtos')
               <p>Turma</p>
               <div class="form-floating mb-3">
                 <select class="form-select" aria-label="Default select example">
-                  <option selected>Open this select menu</option>
+                  <option selected>Selecionar Turma</option>
                   <option value="1">3</option>
                   <option value="2">2</option>
                   <option value="3">1</option>
@@ -95,7 +95,7 @@ const titulo = ref('Formulário de Cadastro de Produtos')
 
             <div class="button-wrapper">
               <button href="#demo-modal" class="btn fill">
-                <a style="text-decoration-line: none" href="#demo-modal">Iniciar Conselho</a>
+
               </button>
             </div>
           </div>

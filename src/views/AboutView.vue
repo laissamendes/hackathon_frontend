@@ -1,5 +1,8 @@
 <!-- eslint-disable vue/no-parsing-error -->
 <script setup>
+
+import AlunoList from '@/components/AlunoList.vue';
+
 function reveal() {
   let reveals = document.querySelectorAll(".reveal");
 
@@ -32,10 +35,15 @@ import { onMounted } from 'vue';
 
 
 
+
 </script>
 
 
 <template>
+
+  <aluno-list />
+</template>
+
 
 <section id="one" class="wrapper style2">
 					<div class="inner">
@@ -4438,3 +4446,4 @@ import { onMounted } from 'vue';
 
 		}
 </style>
+
