@@ -320,7 +320,9 @@ button.primary.ghost {
 .modal__content {
   border-radius: 4px;
   position: relative;
+
   max-width: 100%;
+
   background: #fff;
   padding: 1em 2em;
   width: 700px;

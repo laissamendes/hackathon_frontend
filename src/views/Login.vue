@@ -1,10 +1,11 @@
 <script setup >
-
+import PreLoader from '@/components/PreLoader.vue';
 import '@passageidentity/passage-elements/passage-auth';
 
 </script>
 
 <template>
+  <PreLoader></PreLoader>
   <body>
 	<div class="main reveal">
 		<input type="checkbox" id="chk" aria-hidden="true">
@@ -17,7 +18,7 @@ import '@passageidentity/passage-elements/passage-auth';
 				</form>
 			</div>
 
-			
+
 	</div>
 </body>
 </template>
