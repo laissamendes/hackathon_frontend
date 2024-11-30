@@ -17,12 +17,14 @@ onBeforeRouteUpdate(() => {
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-icon">&#9776;</label>
     <ul class="menu">
-      <li><a href="/">Inicio</a></li>
-      <li><a href="/login">Login</a></li>
-      <li><a href="#one">Sobre</a></li>
-      <li><a href="/Contato">Contato</a></li>
-      <router-link class="btn outline" to="/historico" >Historico</router-link>
-      <router-link class="btn outline" to="/inicio" >Opções</router-link>
+
+    <router-link to="/">Home</router-link>
+    <router-link to="/login">Login</router-link>
+    <router-link to="/contato">Contato</router-link>
+    <router-link to="/conselho">Conselho</router-link>
+    <router-link to="/ocorrencia" >Ocorrência</router-link>
+    <router-link to="/preconselho">Pré Conselho</router-link>
+
     </ul>
   </nav>
 </header>

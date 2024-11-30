@@ -1,36 +1,26 @@
 <script setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
+import { useTurmaStore } from '@/stores/turma'
+import { useConselhoClassseStore } from '@/stores/conselhoClasse'
+import { useTrimestreStore } from '@/stores/trimestre'
 
-const trimestre = ref([
-  { id: 1, description: "1° trimestre" },
-  { id: 2, description: "2° trimestre" },
-  { id: 3, description: "3° trimestre" }
-])
+const turmaStore = useTurmaStore()
+const conselhoClasseStore = useConselhoClassseStore()
+const trimestreStore = useTrimestreStore()
 
-const turma = ref([
-  { id: 2, description: "1INFO1" },
-  { id: 3, description: "1INFO2" },
-  { id: 4, description: "1INFO3" },
-  { id: 5, description: "2INFO1" },
-  { id: 6, description: "2INFO2" },
-  { id: 7, description: "2INFO3" },
-  { id: 8, description: "3INFO1" },
-  { id: 9, description: "3INFO2" },
-  { id: 1, description: "3INFO3" },
-  { id: 10, description: "1QUIMI" },
-  { id: 11, description: "2QUIMI" },
-  { id: 12, description: "3QUIMI" },
-  { id: 13, description: "1AGRO1" },
-  { id: 14, description: "1AGRO2" },
-  { id: 15, description: "1AGRO3" },
-  { id: 16, description: "2AGRO1" },
-  { id: 17, description: "2AGRO2" },
-  { id: 18, description: "2AGRO3" },
-  { id: 19, description: "3AGRO1" },
-  { id: 20, description: "3AGRO2" },
-  { id: 21, description: "3AGRO3" },
-])
+const conselhoClasse = ref({
+  turma: '',
+  trimestre: '',
+})
 
+onMounted(async () => {
+  await turmaStore.getTurmas()
+  await trimestreStore.getTrimestres()
+})
+
+async function iniciarConselhoClasse() {
+  await conselhoClasseStore.criarConselhoClasse(conselhoClasse.value)
+}
 </script>
 <template>
   <div class="home">
@@ -64,21 +54,25 @@ const turma = ref([
               <p>Trimestre</p>
               <div class="form-floating mb-3">
 
-                <select class="form-select" aria-label="Default select example">
-                  <option :value="tri.id" v-for="tri in trimestre" :key="tri.id">{{ tri.description }}</option>
+                <select class="form-select" aria-label="Default select example" v-model="conselhoClasse.trimestre">
+                  <option v-for="trimestre in trimestreStore.trimestres" :key="trimestre.id" :value="trimestre.id">
+                    {{ trimestre.periodo }}
+                  </option>
                 </select>
               </div>
               <p>Turma</p>
               <div class="form-floating mb-3">
 
-                <select class="form-select" aria-label="Default select example">
-                  <option :value="tur.id" v-for="tur in turma" :key="tur.id">{{ tur.description }}</option>
+                <select class="form-select" aria-label="Default select example" v-model="conselhoClasse.turma">
+                  <option v-for="turma in turmaStore.turmas" :key="turma.id" :value="turma.id">
+                    {{ turma.nome }}
+                  </option>
                 </select>
               </div>
             </div>
 
             <div class="button-wrapper">
-              <button href="#demo-modal" class="btn fill"><a style="text-decoration-line: none; color: white" href="#demo-modal">Iniciar Conselho</a></button>
+              <button href="#demo-modal" class="btn fill" @click="iniciarConselhoClasse()">Iniciar Conselho</button>
             </div>
           </div>
         </Tilt>
@@ -92,12 +86,12 @@ const turma = ref([
             <div class="wrapper">
               <p>Ocorrências</p>
               <div class="banner-image">
-                <i class="mdi mdi-file-document-multiple-outline"/>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>file-document-multiple</title><path d="M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4M15 7H20.5L15 1.5V7M8 0H16L22 6V18C22 19.11 21.11 20 20 20H8C6.89 20 6 19.1 6 18V2C6 .89 6.89 0 8 0M17 16V14H8V16H17M20 12V10H8V12H20Z" /></svg>
               </div>
             </div>
 
             <div class="button-wrapper">
-            <router-link to="/addocorrencia" href="#demo-modal" class="btn fill">Adcionar</router-link>
+              <router-link to="/ocorrencia" href="#demo-modal" class="btn fill">Adcionar</router-link>
             </div>
           </div>
         </Tilt>
@@ -208,6 +202,7 @@ div.container {
     0 24px 36px rgba(0, 0, 0, 0.11),
     0 24px 46px var(--box-shadow-color);
 }
+
 .wrapper {
   width: 252px;
   flex-wrap: wrap;
@@ -222,7 +217,7 @@ div.container {
   background-position: center;
   background-size: cover;
   height: 300px;
-  width: 100%;
+  width: 150px;
   border-radius: 12px;
 }
 
@@ -282,7 +277,8 @@ p {
   filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
   transition: all 0.3s ease;
 }
-.bnt_fill{
-color: white;
+
+.bnt_fill {
+  color: white;
 }
 </style>

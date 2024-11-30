@@ -16,4 +16,8 @@ export default class ConselhoClasseService {
     return response.data;
   }
 
+  async criarConselhoClasse(ConselhoClasse) {
+    await axios.post('/conselho-classe/', ConselhoClasse)
+}
+
 }

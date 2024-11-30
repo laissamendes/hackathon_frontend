@@ -20,7 +20,7 @@ const router = createRouter({
       component: LayoutFull,
       children: [
     {
-      path: '',
+      path: '/',
       name: 'home',
       component: HomeView,
     },
@@ -57,7 +57,6 @@ const router = createRouter({
     {
       path: '/inicio',
       name: 'inicio',
-
       component: Inicio,
     },
       ]}

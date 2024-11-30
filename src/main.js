@@ -17,8 +17,7 @@ const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
-createApp(App).use(mdiVue, {
+app.use(mdiVue, {
   icons: mdijs
 })
-
 app.mount('#app')
