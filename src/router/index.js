@@ -7,6 +7,7 @@ import Conselho from '../views/ConselhoView.vue';
 import AddOcorrencia from '../views/AddOcorrenciaView.vue';
 import PreConselho from '../views/PreConselhoView.vue';
 import AboutView from '../views/AboutView.vue';
+import Ocorrencia from '../views/Ocorrencia.vue';
 
 
 const router = createRouter({
@@ -36,6 +37,11 @@ const router = createRouter({
       path: '/addocorrencia',
       name: 'addocorrencia',
       component: AddOcorrencia,
+    },
+    {
+      path: '/ocorrencia',
+      name: 'ocorrencia',
+      component: Ocorrencia,
     },
     {
       path: '/preconselho',

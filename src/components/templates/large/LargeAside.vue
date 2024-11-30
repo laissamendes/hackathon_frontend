@@ -84,7 +84,7 @@ nav {
 
 .menu a:hover {
   opacity: 1;
-  color: #fff;
+  color: #8739fa;
 }
 
 .menu-icon {
