@@ -1,7 +1,7 @@
 <script setup>
 
 import LargeAside from '@/components/templates/large/LargeAside.vue'
-import LargeFooter from '@/components/templates/large/LargeFooter.vue'
+
 </script>
 
 <template>
@@ -13,9 +13,7 @@ import LargeFooter from '@/components/templates/large/LargeFooter.vue'
     <main>
       <router-view />
     </main>
-    <footer>
-      <large-footer />
-    </footer>
+
   </div>
 </template>
 

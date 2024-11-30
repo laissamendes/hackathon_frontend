@@ -101,11 +101,11 @@ import { onMounted } from 'vue';
 								<div class="image fit">
 									<img src="../assets/images/init1.jpg" alt="" width="600" height="300"></div>
 								<div class="content">
-									<header class="align-center"><p>maecenas sapien feugiat ex purus</p>
-										<h2>Lorem ipsum dolor</h2>
+									<header class="align-center"><p>Renilse e Vânia</p>
+										<h2>NUPE / Cordenação</h2>
 									</header><p> O Núcleo Pedagógico (NUPE) no Instituto Federal Catarinense (IFC) Campus Araquari desempenha um papel vital na melhoria e no suporte ao processo educativo. O NUPE é uma entidade essencial que oferece assistência a professores e alunos, garantindo que as práticas pedagógicas sejam constantemente aperfeiçoadas e ajustadas às necessidades da comunidade acadêmica. Entre suas principais funções estão o apoio pedagógico, oferecendo suporte e capacitações aos professores para aprimorar suas metodologias de ensino; o acompanhamento estudantil, monitorando o desempenho dos alunos e promovendo ações que favoreçam o aprendizado e a permanência escolar; e o desenvolvimento de projetos educativos que enriquecem a experiência acadêmica e fomentam a inovação e a criatividade.
                   </p>
-									<footer class="align-center"><a href="#" class="button alt">Learn More</a>
+									<footer class="align-center"><a href="#" class="button alt">Ler Mais</a>
 									</footer></div>
 							</div>
 						</div>
@@ -115,11 +115,11 @@ import { onMounted } from 'vue';
 								<div class="image fit">
 									<img src="../assets/images/init3.jpg" alt="" width="600" height="300"></div>
 								<div class="content">
-									<header class="align-center"><p>mattis elementum sapien pretium tellus</p>
-										<h2>Vestibulum sit amet</h2>
+									<header class="align-center"><p>Adamor e Rojas</p>
+										<h2>Professores do Técnico</h2>
 									</header><p> Os professores do Instituto Federal na área de informática são dedicados à formação de alunos altamente qualificados e preparados para o mercado de trabalho. Eles ministram disciplinas que abrangem desde os fundamentos da programação até tecnologias avançadas, como redes de computadores e desenvolvimento de software. Com vasto conhecimento e experiência prática, os docentes frequentemente se envolvem em projetos de pesquisa e extensão, incentivando os alunos a aplicarem os conhecimentos adquiridos em situações reais. Além das atividades em sala de aula, esses professores orientam projetos que permitem aos alunos desenvolverem soluções inovadoras, contribuindo significativamente para o avanço tecnológico e para a comunidade.
 </p>
-									<footer class="align-center"><a href="#" class="button alt">Learn More</a>
+									<footer class="align-center"><a href="#" class="button alt">Ler Mais</a>
 									</footer></div>
 							</div>
 						</div>
@@ -135,8 +135,8 @@ import { onMounted } from 'vue';
 			</section>
 			<!-- Three -->
 			<section id="three" class="wrapper style2"><div class="inner">
-					<header class="align-center"><p class="special">Nam vel ante sit amet libero scelerisque facilisis eleifend vitae urna</p>
-						<h2>Morbi maximus justo</h2>
+					<header class="align-center"><p class="special">sendo sincero eu n sei oq botar</p>
+						<h2>Professores e Alunos</h2>
 					</header><div class="gallery">
 						<div>
 							<div class="image fit">
@@ -150,12 +150,12 @@ import { onMounted } from 'vue';
 						</div>
 						<div>
 							<div class="image fit">
-								<a href="#"><img src="../assets/images/init6.png" alt="" width="600" height="300"></a>
+								<a href="#"><img src="../assets/images/init6.jpg" alt="" width="600" height="300"></a>
 							</div>
 						</div>
 						<div>
 							<div class="image fit">
-								<a href="#"><img src="../assets/images/fundo.png" alt="" width="600" height="300"></a>
+								<a href="#"><img src="../assets/images/init7.jpg" alt="" width="600" height="300"></a>
 							</div>
 						</div>
 					</div>
