@@ -39,7 +39,7 @@ import { onMounted } from 'vue';
     <header class="hero" >
       <img src="../assets/" alt="">
         <div class="textos-hero">
-            <h1>Título</h1>
+            <h1 style="color: #fff;">Título</h1>
 
             <a href="#sec">Ir</a>
         </div>
@@ -104,7 +104,8 @@ import { onMounted } from 'vue';
 								<div class="content">
 									<header class="align-center"><p>maecenas sapien feugiat ex purus</p>
 										<h2>Lorem ipsum dolor</h2>
-									</header><p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada.</p>
+									</header><p> O Núcleo Pedagógico (NUPE) no Instituto Federal Catarinense (IFC) Campus Araquari desempenha um papel vital na melhoria e no suporte ao processo educativo. O NUPE é uma entidade essencial que oferece assistência a professores e alunos, garantindo que as práticas pedagógicas sejam constantemente aperfeiçoadas e ajustadas às necessidades da comunidade acadêmica. Entre suas principais funções estão o apoio pedagógico, oferecendo suporte e capacitações aos professores para aprimorar suas metodologias de ensino; o acompanhamento estudantil, monitorando o desempenho dos alunos e promovendo ações que favoreçam o aprendizado e a permanência escolar; e o desenvolvimento de projetos educativos que enriquecem a experiência acadêmica e fomentam a inovação e a criatividade.
+                  </p>
 									<footer class="align-center"><a href="#" class="button alt">Learn More</a>
 									</footer></div>
 							</div>
@@ -117,7 +118,8 @@ import { onMounted } from 'vue';
 								<div class="content">
 									<header class="align-center"><p>mattis elementum sapien pretium tellus</p>
 										<h2>Vestibulum sit amet</h2>
-									</header><p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada.</p>
+									</header><p> Os professores do Instituto Federal na área de informática são dedicados à formação de alunos altamente qualificados e preparados para o mercado de trabalho. Eles ministram disciplinas que abrangem desde os fundamentos da programação até tecnologias avançadas, como redes de computadores e desenvolvimento de software. Com vasto conhecimento e experiência prática, os docentes frequentemente se envolvem em projetos de pesquisa e extensão, incentivando os alunos a aplicarem os conhecimentos adquiridos em situações reais. Além das atividades em sala de aula, esses professores orientam projetos que permitem aos alunos desenvolverem soluções inovadoras, contribuindo significativamente para o avanço tecnológico e para a comunidade.
+</p>
 									<footer class="align-center"><a href="#" class="button alt">Learn More</a>
 									</footer></div>
 							</div>
@@ -139,12 +141,12 @@ import { onMounted } from 'vue';
 					</header><div class="gallery">
 						<div>
 							<div class="image fit">
-								<a href="#"><img src="../assets/images/fundo.png" alt="" width="600" height="300"></a>
+								<a href="#"><img src="../assets/images/init4.jpg" alt="" width="600" height="300"></a>
 							</div>
 						</div>
 						<div>
 							<div class="image fit">
-								<a href="#"><img src="../assets/images/fundo.png" alt="" width="600" height="300"></a>
+								<a href="#"><img src="../assets/images/init5.jpg" alt="" width="600" height="300"></a>
 							</div>
 						</div>
 						<div>
@@ -187,7 +189,7 @@ opacity: 1;
 }
 
 .hero{
-    background-image: linear-gradient(10deg, rgba(116, 125, 195, 0.699) 20%, rgba(85, 27, 35, 0.692) 100%), url("../assets/images/init2.jpg");
+    background-image: linear-gradient(10deg, rgba(116, 125, 195, 0.699) 20%, rgba(85, 27, 35, 0.692) 100%), url("../assets/images/bk.jpg");
     width: 100%;
     height: 650px;
     background-repeat: no-repeat;
