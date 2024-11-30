@@ -16,24 +16,6 @@ export const useAlunoStore = defineStore('aluno', () => {
     }
   }
 
-  // async function getProdutosByCategoria(categoria_id) {
-  //   try {
-  //     produtos.value = await alunoService.getProdutosByCategoria(categoria_id);
-  //   } catch (error) {
-  //     console.error('Erro ao buscar produtos por categoria:', error);
-  //   }
-  // }
-
-  // async function adicionarAluno(aluno) {
-  //   try {
-  //     const response = await alunoService.createAluno(aluno);
-  //     produtos.value.push(response);
-  //     await getAluno();
-  //   } catch (error) {
-  //     console.error('Erro ao adicionar aluno:', error);
-  //   }
-  // }
-
   async function atualizarAluno(aluno) {
     try {
       await alunoService.atualizarAluno(aluno);
@@ -43,14 +25,7 @@ export const useAlunoStore = defineStore('aluno', () => {
     }
   }
 
-  // async function excluirAluno(id) {
-  //   try {
-  //     await alunoService.excluirAluno(id);
-  //     await getAluno();
-  //   } catch (error) {
-  //     console.error('Erro ao excluir aluno:', error);
-  //   }
-  // }
+
   async function getAlunoPorId(id) {
     try {
       const aluno = await alunoService.getAlunoPorId(id);

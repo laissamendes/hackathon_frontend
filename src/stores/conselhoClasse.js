@@ -1,3 +1,4 @@
+
 import { ref } from 'vue';
 import { defineStore } from 'pinia';
 import ConselhoClasseService from '@/services/conselhoClasse';
@@ -16,24 +17,6 @@ export const useConselhoClassseStore = defineStore('conselhoClasse', () => {
     }
   }
 
-  // async function getProdutosByCategoria(categoria_id) {
-  //   try {
-  //     concelhoClasse.value = await conselhoClasseService.getProdutosByCategoria(categoria_id);
-  //   } catch (error) {
-  //     console.error('Erro ao buscar concelhoClasse por categoria:', error);
-  //   }
-  // }
-
-  // async function adicionarAluno(conselhoClasse) {
-  //   try {
-  //     const response = await conselhoClasseService.createAluno(conselhoClasse);
-  //     concelhoClasse.value.push(response);
-  //     await getConselhoClasse();
-  //   } catch (error) {
-  //     console.error('Erro ao adicionar conselhoClasse:', error);
-  //   }
-  // }
-
   async function atualizarConselhoClasse(conselhoClasse) {
     try {
       await conselhoClasseService.atualizarConselhoClasse(conselhoClasse);
@@ -43,14 +26,6 @@ export const useConselhoClassseStore = defineStore('conselhoClasse', () => {
     }
   }
 
-  // async function excluirAluno(id) {
-  //   try {
-  //     await conselhoClasseService.excluirAluno(id);
-  //     await getConselhoClasse();
-  //   } catch (error) {
-  //     console.error('Erro ao excluir conselhoClasse:', error);
-  //   }
-  // }
   async function getConselhoClassePorId(id) {
     try {
       const conselhoClasse = await conselhoClasseService.getConselhoClassePorId(id);

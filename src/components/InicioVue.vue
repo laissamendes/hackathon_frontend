@@ -32,7 +32,7 @@ export default {
             </div>
 
             <div class="button-wrapper">
-              <button  class="btn fill"> <a href="/addocorrencia">DETAILS</a></button>
+              <router-link class="btn outline" to="/historico" >Ir</router-link>
 
             </div>
           </div>
@@ -50,14 +50,14 @@ export default {
             </div>
 
             <div class="button-wrapper">
-              <button class="btn outline"><a href="/conselho">DETAILS</a></button>
+              <router-link class="btn outline" to="/conselho" >Ir</router-link>
 
             </div>
           </div>
         </Tilt>
       </div>
 
-      <div>
+      <!-- <div>
         <Tilt :options="this.options" parallax="true">
           <div class="container">
             <div class="wrapper">
@@ -68,12 +68,12 @@ export default {
             </div>
 
             <div class="button-wrapper">
-              <button class="btn outline"> <a href="/preconselho">DETAILS</a></button>
+              <router-link class="btn outline" to="/preConselho" >Ir</router-link>
 
             </div>
           </div>
         </Tilt>
-      </div>
+      </div> -->
 
 
 
@@ -86,7 +86,7 @@ export default {
             </div>
           </div>
           <div class="button-wrapper">
-            <button class="btn outline">DETAILS</button>
+            <router-link class="btn outline" to="/historico" >Ir</router-link>
 
           </div>
         </div>

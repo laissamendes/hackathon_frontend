@@ -4,12 +4,10 @@ import HomeView from '../views/HomeView.vue';
 import Login from '../views/Login.vue';
 import Inicio from '../views/InicioView.vue';
 import Conselho from '../views/ConselhoView.vue';
-import AddOcorrencia from '../views/AddOcorrenciaView.vue';
 import PreConselho from '../views/PreConselhoView.vue';
+import Historico from '@/components/HistoricoVue.vue';
 
 import Ocorrencia from '../views/Ocorrencia.vue';
-import Contato from '../views/Contato.vue';
-
 
 
 const router = createRouter({
@@ -36,9 +34,9 @@ const router = createRouter({
       component: Conselho,
     },
     {
-      path: '/addocorrencia',
-      name: 'addocorrencia',
-      component: AddOcorrencia,
+      path: '/historico',
+      name: 'historico',
+      component: Historico,
     },
     {
       path: '/ocorrencia',
@@ -51,9 +49,9 @@ const router = createRouter({
       component: PreConselho,
     },
     {
-      path: '/contato',
-      name: 'contato',
-      component: Contato,
+      path: '/about',
+      name: 'about',
+      component: AboutView,
     },
     {
       path: '/inicio',
