@@ -35,10 +35,14 @@ export const useConselhoClassseStore = defineStore('conselhoClasse', () => {
     }
   }
 
+  async function criarConselhoClasse(concelhoClasse) {
+    await conselhoClasseService.criarConselhoClasse(concelhoClasse)
+}
 
   return {
     getConselhoClasse,
     atualizarConselhoClasse,
     getConselhoClassePorId,
+    criarConselhoClasse,
   };
 });

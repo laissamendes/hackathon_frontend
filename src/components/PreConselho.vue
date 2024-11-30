@@ -2,18 +2,16 @@
 import { onMounted, ref } from 'vue'
 import { useTurmaStore } from '@/stores/turma'
 import { usePreConselhoStore } from '@/stores/preConselho.js'
+import { useTrimestreStore } from '@/stores/trimestre'
 
 const turmaStore = useTurmaStore()
 const preConselhoStore = usePreConselhoStore()
-
-const trimestre = ref([
-  { id: 1, description: "1° trimestre" },
-  { id: 2, description: "2° trimestre" },
-  { id: 3, description: "3° trimestre" },
-])
+const trimestreStore = useTrimestreStore()
 
 const preConselho = ref({
   turma: '',
+  timestre: '',
+  descricao_trimestre: '',
 })
 
 async function registrarPreConselho() {
@@ -22,6 +20,9 @@ async function registrarPreConselho() {
 
 onMounted(async () => {
   await turmaStore.getTurmas()
+})
+onMounted(async () => {
+  await trimestreStore.getTrimestres()
 })
 </script>
 
@@ -49,11 +50,11 @@ onMounted(async () => {
       </label>
       <select class="form-control" id="trimestreSelect">
         <option
-          v-for="tri in trimestre"
-          :key="tri.id"
-          :value="tri.id"
+          v-for="trimestre in trimestreStore.trimestres"
+          :key="trimestre.id"
+          :value="trimestre.id"
         >
-          {{ tri.description }}
+          {{ trimestre.periodo }}
         </option>
       </select>
     </div>
