@@ -5,7 +5,6 @@ import Login from '../views/Login.vue';
 import Inicio from '../views/InicioView.vue';
 import Conselho from '../views/ConselhoView.vue';
 import PreConselho from '../views/PreConselhoView.vue';
-import AboutView from '../views/AboutView.vue';
 
 import AddOcorrencia from '@/components/AddOcorrenciaVue.vue';
 
@@ -50,11 +49,6 @@ const router = createRouter({
       path: '/preconselho',
       name: 'preconselho',
       component: PreConselho,
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: AboutView,
     },
     {
       path: '/inicio',

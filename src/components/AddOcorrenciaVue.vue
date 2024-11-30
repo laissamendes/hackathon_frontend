@@ -7,7 +7,12 @@ import { useOcorrenciaStore } from '@/stores/ocorrencia.js';
 // import { formatDescription, formatPrice, formatTitle } from '@/helpers/format';
 
 const ocorrenciaStore = useOcorrenciaStore();
-const ocorrencia = ref(null);
+const ocorrencia = ref({
+  categoria_ocorrencia: '',
+  trimestre: '',
+  data_criacao: '',
+  aluno: '',
+});
 
 
 async function getOcorrencia() {

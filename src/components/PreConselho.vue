@@ -1,9 +1,11 @@
 <script setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 
+import { useTurmaStore } from '@/stores/turma'
 import { usePreConselhoStore } from '@/stores/preConselho.js'
-const preConselhoStore = usePreConselhoStore()
 
+const preConselhoStore = usePreConselhoStore()
+const turmaStore = useTurmaStore()
 
 const trimestre = ref([
   { id: 1, description: "1° trimestre" },
@@ -11,29 +13,29 @@ const trimestre = ref([
   { id: 3, description: "3° trimestre" }
 ])
 
-const turma = ref ([
-  {id:2, description:"1INFO1"},
-  {id:3, description:"1INFO2"},
-  {id:4, description:"1INFO3"},
-  {id:5, description:"2INFO1"},
-  {id:6, description:"2INFO2"},
-  {id:7, description:"2INFO3"},
-  {id:8, description:"3INFO1"},
-  {id:9, description:"3INFO2"},
-  {id:1, description:"3INFO3"},
-  {id:10, description:"1QUIMI"},
-  {id:11, description:"2QUIMI"},
-  {id:12, description:"3QUIMI"},
-  {id:13, description:"1AGRO1"},
-  {id:14, description:"1AGRO2"},
-  {id:15, description:"1AGRO3"},
-  {id:16, description:"2AGRO1"},
-  {id:17, description:"2AGRO2"},
-  {id:18, description:"2AGRO3"},
-  {id:19, description:"3AGRO1"},
-  {id:20, description:"3AGRO2"},
-  {id:21, description:"3AGRO3"},
-])
+// const turmas = ref ([
+//   {id:2, nome:"1INFO1"},
+//   {id:3, nome:"1INFO2"},
+//   {id:4, nome:"1INFO3"},
+//   {id:5, nome:"2INFO1"},
+//   {id:6, nome:"2INFO2"},
+//   {id:7, nome:"2INFO3"},
+//   {id:8, nome:"3INFO1"},
+//   {id:9, nome:"3INFO2"},
+//   {id:1, nome:"3INFO3"},
+//   {id:10, nome:"1QUIMI"},
+//   {id:11, nome:"2QUIMI"},
+//   {id:12, nome:"3QUIMI"},
+//   {id:13, nome:"1AGRO1"},
+//   {id:14, nome:"1AGRO2"},
+//   {id:15, nome:"1AGRO3"},
+//   {id:16, nome:"2AGRO1"},
+//   {id:17, nome:"2AGRO2"},
+//   {id:18, nome:"2AGRO3"},
+//   {id:19, nome:"3AGRO1"},
+//   {id:20, nome:"3AGRO2"},
+//   {id:21, nome:"3AGRO3"},
+// ])
 
 const preConselho = ref({
   turma: '',
@@ -44,6 +46,11 @@ const preConselho = ref({
 async function registrarPreConselho() {
   await preConselhoStore.adicionarPreConselho(preConselho.value)
 }
+
+onMounted(async () => {
+  await turmaStore.getTurmas()
+})
+
 </script>
 <template>
   <div class="home">
@@ -56,7 +63,7 @@ async function registrarPreConselho() {
                 <h1>Turma</h1>
               </label>
               <select class="form-control" id="exampleFormControlSelect1">
-                <option :value="tur.id" v-for="tur in turma" :key="tur.id">{{ tur.description }}</option>
+                <option :value="turma.id" v-for="turma in turmaStore.turmas" :key="turma.id">{{ turma.nome }}</option>
               </select>            </div>
             <div class="form-group">
               <label for="exampleFormControlSelect1">
