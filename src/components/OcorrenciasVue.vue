@@ -3,10 +3,11 @@ import { ref } from 'vue'
 import Tilt from 'vanilla-tilt-vue'
 import { onMounted } from 'vue'
 import { useOcorrenciaStore } from '@/stores/ocorrencia.js'
+import { useTurmaStore } from '@/stores/turma'
 
-// import { formatDescription, formatPrice, formatTitle } from '@/helpers/format';
 
 const ocorrenciaStore = useOcorrenciaStore()
+const turmaStore = useTurmaStore()
 
 async function getOcorrencia() {
   await ocorrenciaStore.getOcorrencia()
@@ -14,6 +15,9 @@ async function getOcorrencia() {
 
 onMounted(async () => {
   await getOcorrencia()
+})
+onMounted(async () => {
+  await turmaStore.getTurmas()
 })
 
 const options = ref({ gyroscope: true })
@@ -23,14 +27,15 @@ const options = ref({ gyroscope: true })
     <div id="demo-modal" class="modal wrap">
       <div class="modal__content wrap">
         <div class="card-container">
-          <img class="round" src="" alt="user" />
-          <h3>Rodolfinho</h3>
-          <p>
-            Turma Numero matrícula<br />
-            email
-          </p>
 
-          <div class="skills">
+<img class="round" src="" alt="user" />
+<h3>Daniela Venturi</h3>
+<p>3 info 3          Matrícula:2022328908 </p>
+<p>
+  email:danielaventuriifc@gmail.com
+</p>
+
+<div class="skills">
             <table class="minha-tabela">
               <thead>
                 <tr>
@@ -75,21 +80,22 @@ const options = ref({ gyroscope: true })
           <div class="container">
             <div class="wrapper">
               <h1></h1>
-              <p>Turma</p>
+
               <div class="form-floating mb-3">
+                <p>Turma</p>
                 <select class="form-select" aria-label="Default select example">
-                  <option selected>Selecione a Turma</option>
-                  <option value="1">Primeiro</option>
-                  <option value="2">Segundo</option>
-                  <option value="3">Terceiro</option>
+                  <option v-for="turma in turmaStore.turmas" :key="turma.id" :value="turma.id">
+                    {{ turma.nome }}
+                  </option>
                 </select>
               </div>
 
               <div class="form-floating mb-3">
                 <p>Tipo Ocorrência</p>
                 <select class="form-select" aria-label="Default select example">
-                  <option selected>Selecione o Trimestre</option>
-                  <option value="1">Primeiro</option>
+                  <option selected>Atraso</option>
+                  <option value="1">Sem Uniforme</option>
+                  <option value="2"></option>
                 </select>
               </div>
             </div>
@@ -102,35 +108,17 @@ const options = ref({ gyroscope: true })
           <div class="container">
             <div class="wrapper">
               <p>Alunos</p>
-              <div class="banner-image">
-                <div class="form-floating mb-3">
-                  <table class="table">
-  <thead>
+              <div  class="banner-image" >
+                <button href="#demo-modal" type="button"  style="height: 50px; border: none;">
 
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
+Daniela Venturi
 
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
 
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      
-    </tr>
-  </tbody>
-</table>
-                </div>
+                  <a class="btn" href="#demo-modal">Visualizar</a></button>
               </div>
             </div>
+
+
           </div>
         </Tilt>
       </div>
@@ -153,20 +141,20 @@ p {
 }
 
 .card-container {
-  background-color: #231e39;
+  background-color: #8739fa;
   border-radius: 5px;
   box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
   color: #b3b8cd;
   padding-top: 30px;
   position: relative;
-  width: 350px;
+  width: 600px;
   max-width: 100%;
   text-align: center;
   bottom: 40px;
 }
 
 .card-container .pro {
-  color: #231e39;
+  color: #8739fa;;
   background-color: #febb0b;
   border-radius: 3px;
   font-size: 14px;
@@ -175,6 +163,7 @@ p {
   position: absolute;
   top: 30px;
   left: 30px;
+  width: 600px;
 }
 
 .card-container .round {
@@ -271,13 +260,16 @@ button.primary.ghost {
 
 .modal__footer {
   text-align: right;
+
   a {
     color: #585858;
   }
+
   i {
     color: #d02d2c;
   }
 }
+
 .modal__close {
   position: absolute;
   top: 10px;
@@ -285,6 +277,7 @@ button.primary.ghost {
   color: #585858;
   text-decoration: none;
 }
+
 div {
   display: flex;
   justify-content: center;
@@ -292,21 +285,9 @@ div {
 }
 
 body {
-  /* solid background */
-  background: rgb(0, 212, 255);
-
-  /* gradient background*/
-  background: linear-gradient(45deg, rgba(0, 212, 255, 1) 0%, rgba(11, 3, 45, 1) 100%);
-
-  /* photo background */
-  background-size: cover;
-  background-position: center;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 90vh;
+  background-color: #ffffff;
 }
+
 .cardback {
   background-size: cover;
   background-position: center;
@@ -335,44 +316,30 @@ body {
 
   transition: all 0.3s ease;
 }
+
 div.container {
   height: 570px;
 }
+
 .container:hover {
   transform: scale(1.125);
   color: rgba(226, 34, 226, 0.9);
   border-color: #8739fa;
   transition: all 0.3s ease;
 }
+
 .container:hover {
   transform: translateY(-5px) scale(1.005) translateZ(0);
   box-shadow:
     0 24px 36px rgba(0, 0, 0, 0.11),
     0 24px 46px var(--box-shadow-color);
 }
-container:hover .overlay {
-  transform: scale(4) translateZ(0);
-}
-container:hover .circle {
-  border-color: var(--bg-color-purple);
-  background: var(--bg-color);
-}
-container:hover .circle:after {
-  background: var(--bg-color-purple);
-}
-container:hover p {
-  color: var(--text-color-hover);
-}
-container:active {
-  transform: scale(1) translateZ(0);
-  box-shadow:
-    0 15px 24px rgba(0, 0, 0, 0.11),
-    0 15px 24px var(--box-shadow-color);
-}
+
 .wrapper {
   width: 252px;
   flex-wrap: wrap;
 }
+
 .banner-image {
   background-image: url();
   background-position: center;
@@ -381,6 +348,7 @@ container:active {
   width: 100%;
   border-radius: 12px;
 }
+
 h1 {
   color: #8739fa;
   text-transform: uppercase;
@@ -388,6 +356,7 @@ h1 {
   padding-top: 20px;
   margin: 0px;
 }
+
 p {
   color: #000000;
 
@@ -397,33 +366,40 @@ p {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+
 .button-wrapper {
   margin-top: 18px;
 }
+
 .btn {
   border: none;
-  padding: 12px 24px;
   border-radius: 24px;
   font-size: 12px;
   font-size: 0.8rem;
   letter-spacing: 2px;
   cursor: pointer;
+  background-color: #8739fa;
+  color: white;
 }
-.btn + .btn {
+
+.btn+.btn {
   margin-left: 10px;
 }
+
 .outline {
   background: transparent;
   color: rgba(0, 0, 0, 0.9);
   border: 1px solid #000000;
   transition: all 0.3s ease;
 }
+
 .outline:hover {
   transform: scale(1.125);
   color: #8739fa;
   border-color: #8739fa;
   transition: all 0.3s ease;
 }
+
 .fill {
   background: #8739fa;
   color: rgba(255, 255, 255, 0.95);
@@ -431,12 +407,14 @@ p {
   font-weight: bold;
   transition: all 0.3s ease;
 }
+
 .fill:hover {
   transform: scale(1.125);
   border-color: rgba(214, 63, 181, 0.9);
   filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
   transition: all 0.3s ease;
 }
+
 .home {
   display: flex;
   width: 100%;
@@ -447,6 +425,7 @@ p {
   background-position: top;
   position: sticky;
 }
+
 .home-button {
   display: block;
   transition: 0.5s;
@@ -462,17 +441,20 @@ p {
   cursor: pointer;
   border-radius: 0.4em;
 }
+
 .home-button:hover {
   background-color: rgb(199, 53, 155);
   color: rgb(0, 0, 0);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   border-radius: 0.9em;
 }
+
 .buttons {
   display: flex;
   flex-direction: row;
   height: 100vh;
 }
+
 .nav-button {
   display: flex;
   align-self: center;
@@ -484,51 +466,33 @@ p {
   text-decoration: none;
   flex-direction: column;
 }
-.gradient {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
-}
-.hero {
-  position: fixed;
-  bottom: 0;
-  z-index: -5;
-  min-width: 100%;
-  min-height: 100%;
-  animation: fade-in 1.3s forwards;
-  justify-content: center;
-  align-content: center;
-  object-position: top;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently*/
-}
+
+
 .wrap {
   flex-wrap: wrap;
 }
+
 @media (min-aspect-ration: 16/9) {
   .hero {
     width: 100%;
     height: auto;
   }
 }
+
 @media (max-aspect-ration: 16/9) {
   .hero {
     width: auto;
     height: 100%;
   }
 }
+
 @media only screen and (max-width: 600px) {
   .buttons {
     flex-direction: column;
     transform: translateY(50%);
   }
 }
+
 @media (max-width: 720px) {
   div {
     flex-wrap: wrap;
@@ -541,6 +505,7 @@ p {
     justify-content: center;
     align-items: center;
   }
+
   .button {
     height: auto;
   }
@@ -549,22 +514,29 @@ p {
 /* Estilo geral da tabela */
 .minha-tabela {
   width: 100%;
-  border-collapse: collapse; /* Remove espaços entre as células */
-  font-family: Arial, sans-serif; /* Define a fonte */
+  border-collapse: collapse;
+  /* Remove espaços entre as células */
+  font-family: Arial, sans-serif;
+  /* Define a fonte */
 }
 
 /* Estilo das células de cabeçalho */
 .minha-tabela th {
-  background-color: #873488; /* Cor de fundo */
-  color: rgb(255, 255, 255); /* Cor do texto */
-  padding: 10px; /* Espaçamento interno */
-  text-align: left; /* Alinha o texto à esquerda */
+  background-color: #873488;
+  /* Cor de fundo */
+  color: rgb(255, 255, 255);
+  /* Cor do texto */
+  padding: 10px;
+  /* Espaçamento interno */
+  text-align: left;
+  /* Alinha o texto à esquerda */
 }
 
 /* Estilo das células de dados */
 .minha-tabela td {
   padding: 8px;
-  border: 1px solid #ffffff; /* Adiciona borda entre as células */
+  border: 1px solid #ffffff;
+  /* Adiciona borda entre as células */
 }
 
 /* Estilo das linhas alternadas */

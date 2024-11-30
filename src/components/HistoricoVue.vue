@@ -125,9 +125,9 @@ const options = ref({ gyroscope: true });
 
             <div class="wrapper">
               <h1></h1>
-              <p>Turma</p>
-              <div class="form-floating mb-3">
 
+              <div class="form-floating mb-3">
+                <p>Turma</p>
                 <select class="form-control" id="turmaSelect">
         <option
           v-for="turma in turmaStore.turmas"
@@ -179,7 +179,7 @@ const options = ref({ gyroscope: true });
 Daniela Venturi
 
 
-                  <a class="btn btn-primary btn-lg" href="#demo-modal">Visualizar</a></button>
+                  <a class="btn" href="#demo-modal">Visualizar</a></button>
               </div>
             </div>
 
@@ -351,20 +351,7 @@ div {
 }
 
 body {
-  /* solid background */
-  background: rgb(0, 212, 255);
-
-  /* gradient background*/
-  background: linear-gradient(45deg, rgb(2, 43, 52) 0%, rgba(11, 3, 45, 1) 100%);
-
-  /* photo background */
-  background-size: cover;
-  background-position: center;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 90vh;
+ background-color: #ffffff
 }
 .cardback {
   background-size: cover;
@@ -409,25 +396,7 @@ div.container {
     0 24px 36px rgba(0, 0, 0, 0.11),
     0 24px 46px var(--box-shadow-color);
 }
-container:hover .overlay {
-  transform: scale(4) translateZ(0);
-}
-container:hover .circle {
-  border-color: var(--bg-color-purple);
-  background: var(--bg-color);
-}
-container:hover .circle:after {
-  background: var(--bg-color-purple);
-}
-container:hover p {
-  color: var(--text-color-hover);
-}
-container:active {
-  transform: scale(1) translateZ(0);
-  box-shadow:
-    0 15px 24px rgba(0, 0, 0, 0.11),
-    0 15px 24px var(--box-shadow-color);
-}
+
 .wrapper {
   width: 252px;
   flex-wrap: wrap;
@@ -441,7 +410,6 @@ container:active {
   border-radius: 12px;
 }
 h1 {
-
   color: #8739fa;
   text-transform: uppercase;
   font-size: 2.4rem;
@@ -462,12 +430,13 @@ p {
 }
 .btn {
   border: none;
-  padding: 12px 24px;
   border-radius: 24px;
   font-size: 12px;
   font-size: 0.8rem;
   letter-spacing: 2px;
   cursor: pointer;
+  background-color: #8739fa;
+  color: white;
 }
 .btn + .btn {
   margin-left: 10px;
@@ -543,30 +512,6 @@ p {
   padding: 0;
   text-decoration: none;
   flex-direction: column;
-}
-.gradient {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
-}
-.hero {
-  position: fixed;
-  bottom: 0;
-  z-index: -5;
-  min-width: 100%;
-  min-height: 100%;
-  animation: fade-in 1.3s forwards;
-  justify-content: center;
-  align-content: center;
-  object-position: top;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently*/
 }
 .wrap{
   flex-wrap: wrap;
