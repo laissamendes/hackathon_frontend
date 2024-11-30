@@ -8,6 +8,7 @@ import PreConselho from '../views/PreConselhoView.vue';
 import Historico from '@/components/HistoricoVue.vue';
 
 import Ocorrencia from '../views/Ocorrencia.vue';
+import Contato from '../views/Contato.vue';
 
 
 const router = createRouter({
@@ -49,9 +50,9 @@ const router = createRouter({
       component: PreConselho,
     },
     {
-      path: '/about',
-      name: 'about',
-      component: AboutView,
+      path: '/contato',
+      name: 'contato',
+      component: Contato,
     },
     {
       path: '/inicio',
