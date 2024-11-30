@@ -1,10 +1,7 @@
 <script setup>
-
+import AlunoList from '@/components/AlunoList.vue';
 </script>
 
 <template>
-<h1></h1>
+  <aluno-list />
 </template>
-<style scoped>
-
-</style>

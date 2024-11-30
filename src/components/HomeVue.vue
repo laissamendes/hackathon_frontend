@@ -1,4 +1,4 @@
-
+<script>
 function reveal() {
   let reveals = document.querySelectorAll(".reveal");
 
@@ -72,14 +72,13 @@ import { onMounted } from 'vue';
 
           <div class="container-login100-form-btn">
 						<button class="login100-form-btn" >
-              <a href="/inicio">Docente</a>
+
+              <router-link class="login100-form-btn" to="/inicio" >Doscente</router-link>
 
 						</button>
 					</div>
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Discente
-						</button>
+            <router-link class="login100-form-btn" to="/preConselho" >Doscente</router-link>
 					</div>
 
 

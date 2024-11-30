@@ -1,6 +1,6 @@
 <script setup>
 
-import AddOcorrencia from '@/components/AddOcorrenciaVue.vue';
+import AddOcorrencia from '@/components/AddOcorrencia.vue';
 </script>
 
 <template>
