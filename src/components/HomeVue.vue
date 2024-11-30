@@ -39,7 +39,7 @@ import { onMounted } from 'vue';
     <header class="hero" >
       <img src="../assets/" alt="">
         <div class="textos-hero">
-            <h1 style="color: #fff;">Título</h1>
+            <h1 style="color: #fff; font-size: 5.0rem; ">Bem vindo</h1>
 
             <a href="#sec">Ir</a>
         </div>
@@ -105,7 +105,7 @@ import { onMounted } from 'vue';
 										<h2>NUPE / Cordenação</h2>
 									</header><p> O Núcleo Pedagógico (NUPE) no Instituto Federal Catarinense (IFC) Campus Araquari desempenha um papel vital na melhoria e no suporte ao processo educativo. O NUPE é uma entidade essencial que oferece assistência a professores e alunos, garantindo que as práticas pedagógicas sejam constantemente aperfeiçoadas e ajustadas às necessidades da comunidade acadêmica. Entre suas principais funções estão o apoio pedagógico, oferecendo suporte e capacitações aos professores para aprimorar suas metodologias de ensino; o acompanhamento estudantil, monitorando o desempenho dos alunos e promovendo ações que favoreçam o aprendizado e a permanência escolar; e o desenvolvimento de projetos educativos que enriquecem a experiência acadêmica e fomentam a inovação e a criatividade.
                   </p>
-									<footer class="align-center"><a href="#" class="button alt">Ler Mais</a>
+									<footer class="align-center"><a href="https://araquari.ifc.edu.br" class="button alt">Ler Mais</a>
 									</footer></div>
 							</div>
 						</div>
@@ -119,7 +119,7 @@ import { onMounted } from 'vue';
 										<h2>Professores do Técnico</h2>
 									</header><p> Os professores do Instituto Federal na área de informática são dedicados à formação de alunos altamente qualificados e preparados para o mercado de trabalho. Eles ministram disciplinas que abrangem desde os fundamentos da programação até tecnologias avançadas, como redes de computadores e desenvolvimento de software. Com vasto conhecimento e experiência prática, os docentes frequentemente se envolvem em projetos de pesquisa e extensão, incentivando os alunos a aplicarem os conhecimentos adquiridos em situações reais. Além das atividades em sala de aula, esses professores orientam projetos que permitem aos alunos desenvolverem soluções inovadoras, contribuindo significativamente para o avanço tecnológico e para a comunidade.
 </p>
-									<footer class="align-center"><a href="#" class="button alt">Ler Mais</a>
+									<footer class="align-center"><a href="https://araquari.ifc.edu.br" class="button alt">Ler Mais</a>
 									</footer></div>
 							</div>
 						</div>
