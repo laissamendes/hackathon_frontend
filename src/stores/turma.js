@@ -10,7 +10,7 @@ export const useTurmaStore = defineStore('turma', () => {
   async function getTurmas() {
     try {
       const response = await turmaService.getTurmas();
-      turmas.value = response
+      turmas.value = response.results
     } catch (error) {
       console.error('Erro ao buscar turmas:', error);
     }

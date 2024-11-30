@@ -15,9 +15,9 @@ async function getOcorrencia() {
 
 onMounted(async () => {
   await getOcorrencia()
+  await turmaStore.getTurmas()
 })
 onMounted(async () => {
-  await turmaStore.getTurmas()
 })
 
 const options = ref({ gyroscope: true })
@@ -37,27 +37,27 @@ const options = ref({ gyroscope: true })
             <table class="minha-tabela">
               <thead>
                 <tr>
-                  <th>Disciplina</th>
-                  <th>T1</th>
-                  <th>T2</th>
-                  <th>T3</th>
+                  <th>Ocorrências</th>
+                  <th>1</th>
+                  <th>2</th>
+                  <th>3</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Matemática</td>
+                  <td>Sem uniforme</td>
                   <td>7</td>
                   <td>5</td>
                   <td>8</td>
                 </tr>
                 <tr>
-                  <td>Portugues</td>
+                  <td>Atraso</td>
                   <td>5</td>
                   <td>5</td>
                   <td>7</td>
                 </tr>
                 <tr>
-                  <td>Geografia</td>
+                  <td>Reunião</td>
                   <td>3</td>
                   <td>7</td>
                   <td>6</td>

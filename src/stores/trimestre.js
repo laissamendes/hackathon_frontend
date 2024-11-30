@@ -10,7 +10,7 @@ export const useTrimestreStore = defineStore('trimestre', () => {
   async function getTrimestres() {
     try {
       const response = await trimestreService.getTrimestres();
-      trimestres.value = response
+      trimestres.value = response.results
     } catch (error) {
       console.error('Erro ao buscar trimestres:', error);
     }
