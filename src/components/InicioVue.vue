@@ -1,17 +1,5 @@
 <script>
-import Tilt from 'vanilla-tilt-vue'
 
-export default {
-  name: 'App',
-  components: {
-    Tilt,
-  },
-  data: function () {
-    return {
-      options: { gyroscope: true },
-    }
-  },
-}
 
 
 

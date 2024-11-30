@@ -275,6 +275,7 @@ button.primary.ghost {
   border-radius: 4px;
   position: relative;
   max-width: 90%;
+  width: 600px;
   background: #fff;
   padding: 1em 2em;
 }
