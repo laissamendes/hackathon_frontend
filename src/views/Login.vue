@@ -1,33 +1,7 @@
-<script >
-function reveal() {
-  let reveals = document.querySelectorAll(".reveal");
+<script setup >
 
-  for (let i = 0; i < reveals.length; i++) {
-    let windowHeight = window.innerHeight;
-    let elementTop = reveals[i].getBoundingClientRect().top;
-    let elementVisible = 150;
+import '@passageidentity/passage-elements/passage-auth';
 
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-
-window.addEventListener("scroll", reveal);
-
-
-import { onMounted } from 'vue';
-
-    import Rellax from 'rellax'
-
-    onMounted(() => {
-      let rellax = new Rellax('.rellax');
-
-
-
-  });
 </script>
 
 <template>
@@ -52,6 +26,7 @@ import { onMounted } from 'vue';
 					<input type="email" name="email" placeholder="Email" required="">
 					<input type="password" name="pswd" placeholder="Password" required="">
 					<button>Login</button>
+          <passage-auth app-id="PhLcRqDh8OaDNxTAnC4KQcda"></passage-auth>
 				</form>
 			</div>
 	</div>
