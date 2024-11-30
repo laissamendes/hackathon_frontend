@@ -6,7 +6,7 @@ import MediumFooter from '@/components/templates/medium/MediumFooter.vue'
 
 <template>
   <div id="layout-medium">
-    
+
     <aside>
       <medium-aside />
     </aside>
@@ -21,7 +21,7 @@ import MediumFooter from '@/components/templates/medium/MediumFooter.vue'
 
 <style scoped>
 #layout-medium {
- 
+
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
     'aside main'
@@ -36,7 +36,7 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 1.5rem;
+  
   grid-area: aside;
 }
 
@@ -46,7 +46,7 @@ main {
 }
 
 footer {
-  
+
   justify-content: space-between;
   align-items: center;
 
