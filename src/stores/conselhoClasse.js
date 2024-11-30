@@ -7,9 +7,9 @@ const conselhoClasseService = new ConselhoClasseService();
 export const useConselhoClassseStore = defineStore('conselhoClasse', () => {
   const concelhoClasse = ref([]);
 
-  async function getConcelhoClasse() {
+  async function getConselhoClasse() {
     try {
-      const response = await conselhoClasseService.getConcelhoClasse();
+      const response = await conselhoClasseService.getConselhoClasse();
       concelhoClasse.value = response.results;
     } catch (error) {
       console.error('Erro ao buscar concelhoClasse:', error);
@@ -28,16 +28,16 @@ export const useConselhoClassseStore = defineStore('conselhoClasse', () => {
   //   try {
   //     const response = await conselhoClasseService.createAluno(conselhoClasse);
   //     concelhoClasse.value.push(response);
-  //     await getConcelhoClasse();
+  //     await getConselhoClasse();
   //   } catch (error) {
   //     console.error('Erro ao adicionar conselhoClasse:', error);
   //   }
   // }
 
-  async function atualizarConcelhoClasse(conselhoClasse) {
+  async function atualizarConselhoClasse(conselhoClasse) {
     try {
-      await conselhoClasseService.atualizarConcelhoClasse(conselhoClasse);
-      await getConcelhoClasse();
+      await conselhoClasseService.atualizarConselhoClasse(conselhoClasse);
+      await getConselhoClasse();
     } catch (error) {
       console.error('Erro ao atualizar conselhoClasse:', error);
     }
@@ -46,7 +46,7 @@ export const useConselhoClassseStore = defineStore('conselhoClasse', () => {
   // async function excluirAluno(id) {
   //   try {
   //     await conselhoClasseService.excluirAluno(id);
-  //     await getConcelhoClasse();
+  //     await getConselhoClasse();
   //   } catch (error) {
   //     console.error('Erro ao excluir conselhoClasse:', error);
   //   }
@@ -62,8 +62,8 @@ export const useConselhoClassseStore = defineStore('conselhoClasse', () => {
 
 
   return {
-    getConcelhoClasse,
-    atualizarConcelhoClasse,
+    getConselhoClasse,
+    atualizarConselhoClasse,
     getConselhoClassePorId,
   };
 });

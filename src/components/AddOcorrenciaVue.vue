@@ -26,23 +26,43 @@ const options = ref({ gyroscope: true });
     <div class="modal__content wrap">
 
       <div class="card-container">
-	<span class="pro">PRO</span>
-	<img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
-	<h3>Ricky Park</h3>
-	<h6>New York</h6>
-	<p>User interface designer and <br/> front-end developer</p>
+
+	<img class="round" src="" alt="user" />
+	<h3>Rodolfinho</h3>
+	<p>Turma                    Numero matrícula<br/> email </p>
 
 	<div class="skills">
-		<h6>Skills</h6>
-		<ul>
-			<li>UI / UX</li>
-			<li>Front End Development</li>
-			<li>HTML</li>
-			<li>CSS</li>
-			<li>JavaScript</li>
-			<li>React</li>
-			<li>Node</li>
-		</ul>
+		<table class="minha-tabela">
+  <thead>
+    <tr>
+      <th>Disciplina</th>
+      <th>T1</th>
+      <th>T2</th>
+      <th>T3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Matemática</td>
+      <td>7</td>
+      <td>5</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Portugues</td>
+      <td>5</td>
+      <td>5</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>Geografia</td>
+      <td>3</td>
+      <td>7</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+
 	</div>
 </div>
 
@@ -64,29 +84,29 @@ const options = ref({ gyroscope: true });
               <div class="form-floating mb-3">
 
                 <select class="form-select" aria-label="Default select example">
-                  <option selected>Open this select menu</option>
+                  <option selected>Selecione a Turma</option>
                   <option value="1">Primeiro</option>
                   <option value="2">Segundo</option>
                   <option value="3">Terceiro</option>
                 </select>
               </div>
-              <p>Nota menor q 6</p>
+              <p>Nota dos alunos</p>
               <div class="form-floating mb-3">
 
                 <select class="form-select" aria-label="Default select example">
-                  <option selected>Open this select menu</option>
-                  <option value="1">3</option>
-                  <option value="2">2</option>
-                  <option value="3">1</option>
+                  <option selected>Selecione a nota</option>
+                  <option value="1">Menor que 6</option>
+                  <option value="2">Maior que 6</option>
+                  <option value="3">Todos</option>
                 </select>
               </div>
               <div class="form-floating mb-3">
-                <p>ooo</p>
+                <p>Trimestre</p>
 <select class="form-select" aria-label="Default select example">
-  <option selected>Open this select menu</option>
-  <option value="1">3</option>
-  <option value="2">2</option>
-  <option value="3">1</option>
+  <option selected>Selecione o Trimestre</option>
+  <option value="1">Primeiro</option>
+  <option value="2">Segindo</option>
+  <option value="3">Terceiro</option>
 </select>
 </div>
             </div>
@@ -107,7 +127,9 @@ const options = ref({ gyroscope: true });
             <div class="wrapper">
               <p>Alunos</p>
               <div class="banner-image">
-                <button href="#demo-modal" type="button"  style="height: 50px; border: none;"> <a class="btn btn-primary btn-lg" href="#demo-modal">Nome Aluno</a></button>
+                <button href="#demo-modal" type="button"  style="height: 50px; border: none;">
+                  Rodolfinho
+                  <a class="btn btn-primary btn-lg" href="#demo-modal">Visualizar</a></button>
               </div>
             </div>
 
@@ -170,7 +192,7 @@ button.primary {
 	border: 1px solid #03BFCB;
 	border-radius: 3px;
 	color: #231E39;
-	font-family: Montserrat, sans-serif;
+
 	font-weight: 500;
 	padding: 10px 25px;
 }
@@ -222,7 +244,7 @@ button.primary.ghost {
   border-radius: 3px;
   text-transform: uppercase;
   color: #585858;
-  font-family: 'Roboto', sans-serif;
+
 }
 
 .modal {
@@ -366,7 +388,7 @@ container:active {
   border-radius: 12px;
 }
 h1 {
-  font-family: 'Righteous', sans-serif;
+
   color: #8739fa;
   text-transform: uppercase;
   font-size: 2.4rem;
@@ -375,7 +397,7 @@ h1 {
 }
 p {
   color: #000000;
-  font-family: 'Lato', sans-serif;
+
   text-align: center;
   font-size: 1.4rem;
   line-height: 150%;
@@ -441,7 +463,7 @@ p {
   padding: 0.5em 2em;
   justify-self: center;
   font-size: 1.2rem;
-  font-family: 'Magisho', sans-serif;
+
   width: 13em;
   position: relative;
   cursor: pointer;
@@ -533,5 +555,35 @@ p {
 
 }
 
+/* Estilo geral da tabela */
+.minha-tabela {
+  width: 100%;
+  border-collapse: collapse; /* Remove espaços entre as células */
+  font-family: Arial, sans-serif; /* Define a fonte */
+}
+
+/* Estilo das células de cabeçalho */
+.minha-tabela th {
+  background-color: #873488; /* Cor de fundo */
+  color: rgb(255, 255, 255); /* Cor do texto */
+  padding: 10px; /* Espaçamento interno */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilo das células de dados */
+.minha-tabela td {
+  padding: 8px;
+  border: 1px solid #ffffff; /* Adiciona borda entre as células */
+}
+
+/* Estilo das linhas alternadas */
+.minha-tabela tr:nth-child(even) {
+  background-color: #f2f2f24c;
+}
+
+/* Estilo ao passar o mouse por cima das linhas */
+.minha-tabela tr:hover {
+  background-color: #dddddd39;
+}
 
 </style>
