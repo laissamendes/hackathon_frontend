@@ -40,10 +40,4 @@ main {
   grid-area: main;
 }
 
-footer {
-  justify-content: space-between;
-  align-items: center;
-  background-color: #eeeeee;
-  grid-area: footer;
-}
 </style>

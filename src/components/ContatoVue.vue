@@ -6,39 +6,39 @@
       <div class="left-side">
         <div class="address details">
           <i class="fas fa-map-marker-alt"></i>
-          <div class="topic">Address</div>
+          <div class="topic">Endereço</div>
           <div class="text-one">Surkhet, NP12</div>
           <div class="text-two">Birendranagar 06</div>
         </div>
         <div class="phone details">
           <i class="fas fa-phone-alt"></i>
-          <div class="topic">Phone</div>
+          <div class="topic">Telefone</div>
           <div class="text-one">+0098 9893 5647</div>
           <div class="text-two">+0096 3434 5678</div>
         </div>
         <div class="email details">
           <i class="fas fa-envelope"></i>
           <div class="topic">Email</div>
-          <div class="text-one">codinglab@gmail.com</div>
-          <div class="text-two">info.codinglab@gmail.com</div>
+          <div class="text-one">ninjasdepijama@gmail.com</div>
+          <div class="text-two">ldgg@gmail.com</div>
         </div>
       </div>
       <div class="right-side">
-        <div class="topic-text">Send us a message</div>
-        <p>If you have any work from me or any types of quries related to my tutorial, you can send me message from here. It's my pleasure to help you.</p>
+        <div class="topic-text">Envie Uma Mensagem</div>
+        <p>Se houver qualquer erro grave durante o uso do site, por favor nos envie uma mensagem para que possamos auxilia-lo e resolver o problema o mais rápido possível.</p>
       <form action="#">
         <div class="input-box">
-          <input type="text" placeholder="Enter your name">
+          <input type="text" placeholder="Seu Nome">
         </div>
         <div class="input-box">
-          <input type="text" placeholder="Enter your email">
+          <input type="email" placeholder="Seu Email">
         </div>
         <div class="input-box message-box">
-          <textarea>Some text...</textarea>
+          <textarea placeholder="Descrição"></textarea>
 
         </div>
         <div class="button">
-          <input type="button" value="Send Now" >
+          <input type="button" value="Enviar" >
         </div>
       </form>
     </div>

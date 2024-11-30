@@ -188,7 +188,7 @@ opacity: 1;
 }
 
 .hero{
-    background-image: linear-gradient(10deg, rgba(116, 125, 195, 0.699) 20%, rgba(85, 27, 35, 0.692) 100%), url("../assets/images/bk.jpg");
+    background-image: linear-gradient(10deg, rgba(116, 125, 195, 0.699) 20%, rgba(85, 27, 35, 0.692) 100%), url("../assets/images/init2.jpg");
     width: 100%;
     height: 650px;
     background-repeat: no-repeat;
