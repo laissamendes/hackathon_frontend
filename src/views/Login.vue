@@ -1,5 +1,4 @@
 <script setup >
-
 import '@passageidentity/passage-elements/passage-auth';
 
 </script>

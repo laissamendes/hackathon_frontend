@@ -50,7 +50,7 @@ async function registrarPreConselho() {
     <div class="buttons">
       <div>
         <div class="container">
-          <form>
+          <form @submit.prevent="registrarPreConselho">
             <div class="form-group">
               <label for="exampleFormControlInput1">
                 <h1>Turma</h1>
@@ -74,7 +74,7 @@ async function registrarPreConselho() {
                 rows="3"></textarea>
             </div>
             <div id="btn-submit">
-              <button type="submit" @click="registrarPreConselho()">Enviar</button>
+              <button type="submit">Enviar</button>
             </div>
 
           </form>
