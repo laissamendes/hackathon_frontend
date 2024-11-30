@@ -12,7 +12,7 @@ export const useOcorrenciaStore = defineStore('ocorrencia', () => {
       const response = await ocorrenciaService.getOcorrencia();
       concelhoClasse.value = response.results;
     } catch (error) {
-      console.error('Erro ao buscar concelhoClasse:', error);
+      console.error('Erro ao buscar ocorrencia:', error);
     }
   }
 
