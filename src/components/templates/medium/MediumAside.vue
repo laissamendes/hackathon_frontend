@@ -12,15 +12,16 @@ onBeforeRouteUpdate(() => {
   <header class="header">
   <nav>
     <div class="logo">
-      <a href="index.html"><span>Teste</span>Teste</a>
+      <img style="width: 80px;" src="../../../assets/images/logo.jpg" alt="">
     </div>
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-icon">&#9776;</label>
     <ul class="menu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Skills</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Connect</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="#one">Sobre</a></li>
+      <li><a href="/Contato">Contato</a></li>
+      <router-link class="btn outline" to="/addocorrencia" >Adicionar Ocorrência</router-link>
     </ul>
   </nav>
 </header>
@@ -39,10 +40,11 @@ onBeforeRouteUpdate(() => {
   position: sticky;
   top: 0;
   width: 100%;
+  color: #151418;
   box-shadow: 0 4px 20px hsla(207, 24%, 35%, 0.1);
-  background-color: #6e48a7;
+  background-color: #ffffff;
   z-index: 1;
-  border-bottom: solid 2px #fff;
+  border-bottom: solid 2px #6e48a7;
 }
 
 nav {

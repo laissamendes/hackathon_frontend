@@ -37,7 +37,6 @@ import { onMounted } from 'vue';
 
 
     <header class="hero" >
-      <img src="../assets/" alt="">
         <div class="textos-hero">
             <h1 style="color: #fff; font-size: 5.0rem; ">Bem vindo</h1>
 
