@@ -2,12 +2,7 @@
 
   <footer>
   <div class="footer">
-  <div class="row" style="flex-wrap: nowrap">
-  <a href="#"><i class="fa fa-facebook"></i></a>
-  <a href="#"><i class="fa fa-instagram"></i></a>
-  <a href="#"><i class="fa fa-youtube"></i></a>
-  <a href="#"><i class="fa fa-twitter"></i></a>
-  </div>
+
 
   <div class="row">
   <ul>
@@ -26,36 +21,36 @@
 
   <style scoped>
 
-
   .footer{
       position: static;
 
       bottom: 0%;
       width: 100%;
-  background:#000;
-  padding: 10px 0px;
+  background:#ffffff;
+  padding: 20px 00px;
   font-family: 'Play', sans-serif;
   text-align:center;
   z-index: 100;
   top: 85%;
+  border: solid 2px #000;
   }
 
   .footer .row{
   width:100%;
   padding:1px;
-  color:gray;
-  font-size:0.8em;
+  color:rgb(0, 0, 0);
+  font-size:1.0em;
   }
 
   .footer .row a{
   text-decoration:none;
-  color:gray;
+  color:rgb(0, 0, 0);
   transition:0.5s;
   margin: 2px;
   }
 
   .footer .row a:hover{
-  color:#fff;
+  color:#580e46;
   }
 
   .footer .row ul{
